@@ -29,15 +29,15 @@
     <div id="Busqueda">
         <div class="container text-center mt-5">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <h2 class="mb-4">Validación de certificado</h2>
-                    <p class="text-muted">Esta opción te permite confirmar los datos y la validez de tu certificado. Ingresa el número de folio abajo y haz clic en Verificar.</p>
+                    <p class="text-muted">Ingresa el folio digital de tu certificado (ejemplo: 9da9226f-...) para confirmar su validez.</p>
                     <div class="card p-4">
                         <div class="text-start mb-3">
-                            <b>Folio:</b>
-                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="" />
+                            <b>Folio Digital:</b>
+                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ingresa el folio de 32 caracteres" />
                         </div>
-                        <button type="button" onclick="validarFolio()" class="btn btn-success btn-lg w-100">Verificar</button>
+                        <button type="button" onclick="validarFolio()" class="btn btn-success btn-lg w-100">Verificar Certificado</button>
                     </div>
                 </div>
             </div>
@@ -54,20 +54,20 @@
                     <h4 class="mb-0" style="color: #285C4D;">INSTITUTO NACIONAL PARA LA EDUCACIÓN DE LOS ADULTOS</h4>
                 </div>
                 <div class="card-body p-4">
-                    <p class="text-center mb-4"><b>DATOS DEL CERTIFICADO</b></p>
+                    <p class="text-center mb-4"><b>DATOS DEL CERTIFICADO ENCONTRADO</b></p>
                     <table class="table">
                         <tr><td style="width: 45%;"><b>Nombre:</b></td><td><span id="lblNombre"></span></td></tr>
-                        <tr><td><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
-                        <tr><td><b>Promedio:</b></td><td><span id="lblPromedio"></span></td></tr>
-                        <tr><td><b>Fecha de conclusión de estudios:</b></td><td><span id="lblConclusion"></span></td></tr>
-                        <tr><td><b>Tipo de documento:</b></td><td>CERTIFICADO</td></tr>
-                        <tr><td><b>Fecha de emisión:</b></td><td><span id="lblEmision"></span></td></tr>
-                        <tr><td><b>Lugar de emisión:</b></td><td><span id="lblLugar"></span></td></tr>
-                        <tr><td><b>Folio:</b></td><td><span id="lblFolio"></span></td></tr>
-                        <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
-                        <tr><td><b>Autoridad educativa:</b></td><td>JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</td></tr>
-                        <tr><td><b>No. de certificado autoridad educativa:</b></td><td>00001000000519186162</td></tr>
-                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Liga de validación</a></td></tr>
+                        <tr><td style="width: 45%;"><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Promedio:</b></td><td><span id="lblPromedio"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Fecha de conclusión de estudios:</b></td><td><span id="lblConclusion"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Tipo de documento:</b></td><td>CERTIFICADO</td></tr>
+                        <tr><td style="width: 45%;"><b>Fecha de emisión:</b></td><td><span id="lblEmision"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Lugar de emisión:</b></td><td><span id="lblLugar"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Folio:</b></td><td><span id="lblFolio"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>ID:</b></td><td><span id="lblID"></span></td></tr>
+                        <tr><td style="width: 45%;"><b>Autoridad educativa:</b></td><td>JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</td></tr>
+                        <tr><td style="width: 45%;"><b>No. de certificado autoridad educativa:</b></td><td>00001000000519186162</td></tr>
+                        <tr><td style="width: 45%;"><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Verificar en portal SEP</a></td></tr>
                     </table>
                 </div>
             </div>
@@ -79,30 +79,31 @@
     </footer>
 
     <script>
+        // Base de Datos organizada por Folios Digitales (UUID)
         const baseDatos = {
-            "INEA-2601": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274", folio: "9da9226f-6e07-41cc-81f6-23cb903e6593" },
-            "INEA-2602": { nombre: "CARLOS ALBERTO MEZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2024-10-15", emision: "2024-10-20", lugar: "CIUDAD DE MÉXICO", id: "0511255380", folio: "8ba8226f-5f07-31cc-91f6-12cb903e6580" },
-            "INEA-2603": { nombre: "BEATRIZ ELENA RIVAS", nivel: "PRIMARIA", promedio: "9.2", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MONTERREY, NUEVO LEÓN", id: "0612255490", folio: "7ca7226f-4e07-21cc-81f6-01cb903e6570" },
-            "INEA-2604": { nombre: "DANIEL ORTEGA SOLIS", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "GUADALAJARA, JALISCO", id: "0713255500", folio: "6db6226f-3d07-11cc-71f6-92cb903e6560" },
-            "INEA-2605": { nombre: "ELENA GOMEZ MARIN", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2024-11-20", emision: "2024-11-25", lugar: "MÉRIDA, YUCATÁN", id: "0814255610", folio: "5ea5226f-2c07-01cc-61f6-83cb903e6550" },
-            "INEA-2606": { nombre: "FERNANDO DURAN LUNA", nivel: "PRIMARIA", promedio: "8.8", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "PUEBLA, PUEBLA", id: "0915255720", folio: "4fb4226f-1b07-91cc-51f6-74cb903e6540" },
-            "INEA-2607": { nombre: "GLORIA TREJO REYES", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-09-12", emision: "2024-09-18", lugar: "TIJUANA, BCN", id: "1016255830", folio: "3ga3226f-0a07-81cc-41f6-65cb903e6530" },
-            "INEA-2608": { nombre: "HUGO SANCHEZ PEÑA", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "TOLUCA, ESTADO DE MÉXICO", id: "1117255940", folio: "2ha2226f-9z07-71cc-31f6-56cb903e6520" },
-            "INEA-2609": { nombre: "IRENE SOSA CASTRO", nivel: "PRIMARIA", promedio: "8.3", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "QUERÉTARO, QRO", id: "1218256050", folio: "1ia1226f-8y07-61cc-21f6-47cb903e6510" },
-            "INEA-2610": { nombre: "JORGE LUIS MORENO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2024-08-30", emision: "2024-09-05", lugar: "VERACRUZ, VER", id: "1319256160", folio: "0ja0226f-7x07-51cc-11f6-38cb903e6500" },
-            "INEA-2611": { nombre: "KARLA VENEGAS TORRES", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "OAXACA, OAX", id: "1420256270", folio: "9ka9226f-6w07-41cc-01f6-29cb903e6490" },
-            "INEA-2612": { nombre: "LUIS ROBLES DIAZ", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-10-30", emision: "2024-11-05", lugar: "TABASCO, VHSA", id: "1521256380", folio: "8la8226f-5v07-31cc-91f6-10cb903e6480" },
-            "INEA-2613": { nombre: "MARIA JOSE LOPEZ", nivel: "SECUNDARIA", promedio: "9.9", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "CHIAPAS, TGZ", id: "1622256490", folio: "7ma7226f-4u07-21cc-81f6-01cb903e6470" },
-            "INEA-2614": { nombre: "OSCAR TELLEZ RUIZ", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2024-11-11", emision: "2024-11-16", lugar: "AGUASCALIENTES, AGS", id: "1723256500", folio: "6na6226f-3t07-11cc-71f6-92cb903e6460" },
-            "INEA-2615": { nombre: "PATRICIA VEGA MARIN", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2024-12-28", emision: "2025-01-02", lugar: "SALTILLO, COAHUILA", id: "1824256610", folio: "5oa5226f-2s07-01cc-61f6-83cb903e6450" },
-            "INEA-2616": { nombre: "RICARDO FLORES SANCHEZ", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2024-09-25", emision: "2024-09-30", lugar: "COLIMA, COL", id: "1925256720", folio: "4pa4226f-1r07-91cc-51f6-74cb903e6440" },
-            "INEA-2617": { nombre: "SOFIA REYES PALACIOS", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-15", emision: "2024-11-20", lugar: "ZACATECAS, ZAC", id: "2026256830", folio: "3qa3226f-0q07-81cc-41f6-65cb903e6430" },
-            "INEA-2618": { nombre: "TOMAS GALVAN HERRERA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "HERMOSILLO, SONORA", id: "2127256940", folio: "2ra2226f-9p07-71cc-31f6-56cb903e6420" },
-            "INEA-2619": { nombre: "VICTOR MANUEL SOSA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "LA PAZ, BCS", id: "2228257050", folio: "1sa1226f-8o07-61cc-21f6-47cb903e6410" }
+            "9da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274" },
+            "8ea8226f-5f07-41cc-81f6-23cb903e7500": { nombre: "CARLOS ALBERTO MEZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2024-10-15", emision: "2024-10-20", lugar: "CIUDAD DE MÉXICO", id: "0511255380" },
+            "7ca7226f-4e07-21cc-81f6-01cb903e6570": { nombre: "BEATRIZ ELENA RIVAS", nivel: "PRIMARIA", promedio: "9.2", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MONTERREY, NL", id: "0612255490" },
+            "6db6226f-3d07-11cc-71f6-92cb903e6560": { nombre: "DANIEL ORTEGA SOLIS", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "GUADALAJARA, JAL", id: "0713255500" },
+            "5ea5226f-2c07-01cc-61f6-83cb903e6550": { nombre: "ELENA GOMEZ MARIN", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2024-11-20", emision: "2024-11-25", lugar: "MÉRIDA, YUC", id: "0814255610" },
+            "4fb4226f-1b07-91cc-51f6-74cb903e6540": { nombre: "FERNANDO DURAN LUNA", nivel: "PRIMARIA", promedio: "8.8", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "PUEBLA, PUE", id: "0915255720" },
+            "3ga3226f-0a07-81cc-41f6-65cb903e6530": { nombre: "GLORIA TREJO REYES", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-09-12", emision: "2024-09-18", lugar: "TIJUANA, BCN", id: "1016255830" },
+            "2ha2226f-9z07-71cc-31f6-56cb903e6520": { nombre: "HUGO SANCHEZ PEÑA", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "TOLUCA, MEX", id: "1117255940" },
+            "1ia1226f-8y07-61cc-21f6-47cb903e6510": { nombre: "IRENE SOSA CASTRO", nivel: "PRIMARIA", promedio: "8.3", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "QUERÉTARO, QRO", id: "1218256050" },
+            "0ja0226f-7x07-51cc-11f6-38cb903e6500": { nombre: "JORGE LUIS MORENO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2024-08-30", emision: "2024-09-05", lugar: "VERACRUZ, VER", id: "1319256160" },
+            "9ka9226f-6w07-41cc-01f6-29cb903e6490": { nombre: "KARLA VENEGAS TORRES", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "OAXACA, OAX", id: "1420256270" },
+            "8la8226f-5v07-31cc-91f6-10cb903e6480": { nombre: "LUIS ROBLES DIAZ", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-10-30", emision: "2024-11-05", lugar: "TABASCO, VHSA", id: "1521256380" },
+            "7ma7226f-4u07-21cc-81f6-01cb903e6470": { nombre: "MARIA JOSE LOPEZ", nivel: "SECUNDARIA", promedio: "9.9", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "CHIAPAS, TGZ", id: "1622256490" },
+            "6na6226f-3t07-11cc-71f6-92cb903e6460": { nombre: "OSCAR TELLEZ RUIZ", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2024-11-11", emision: "2024-11-16", lugar: "AGUASCALIENTES, AGS", id: "1723256500" },
+            "5oa5226f-2s07-01cc-61f6-83cb903e6450": { nombre: "PATRICIA VEGA MARIN", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2024-12-28", emision: "2025-01-02", lugar: "SALTILLO, COAH", id: "1824256610" },
+            "4pa4226f-1r07-91cc-51f6-74cb903e6440": { nombre: "RICARDO FLORES SANCHEZ", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2024-09-25", emision: "2024-09-30", lugar: "COLIMA, COL", id: "1925256720" },
+            "3qa3226f-0q07-81cc-41f6-65cb903e6430": { nombre: "SOFIA REYES PALACIOS", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-15", emision: "2024-11-20", lugar: "ZACATECAS, ZAC", id: "2026256830" },
+            "2ra2226f-9p07-71cc-31f6-56cb903e6420": { nombre: "TOMAS GALVAN HERRERA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "HERMOSILLO, SON", id: "2127256940" },
+            "1sa1226f-8o07-61cc-21f6-47cb903e6410": { nombre: "VICTOR MANUEL SOSA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "LA PAZ, BCS", id: "2228257050" }
         };
 
         function validarFolio() {
-            const fInput = document.getElementById('FolioInput').value.trim().toUpperCase();
+            const fInput = document.getElementById('FolioInput').value.trim().toLowerCase();
             if (baseDatos[fInput]) {
                 const d = baseDatos[fInput];
                 document.getElementById('lblNombre').innerText = d.nombre;
@@ -112,13 +113,13 @@
                 document.getElementById('lblEmision').innerText = d.emision;
                 document.getElementById('lblLugar').innerText = d.lugar;
                 document.getElementById('lblID').innerText = d.id;
-                document.getElementById('lblFolio').innerText = d.folio;
+                document.getElementById('lblFolio').innerText = fInput.toUpperCase();
 
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 window.scrollTo(0, 0);
             } else {
-                alert("Folio no válido.");
+                alert("Folio digital no encontrado. Asegúrate de copiar el código completo.");
             }
         }
 
