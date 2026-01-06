@@ -13,12 +13,13 @@
         .card { border-radius: 0; border: 1px solid #ccc; box-shadow: none; }
         .card-header { background-color: #fff !important; border-bottom: 2px solid #285C4D; padding: 15px; }
         
-        /* MODIFICACIÓN: Logo oculto por defecto en la nav */
+        /* El logo de la navegación inicia oculto */
         .logo-nav { 
             height: 45px; 
             width: auto; 
             margin-right: 15px; 
             display: none; 
+            filter: brightness(0) invert(1); /* Lo hace blanco para que resalte en el fondo verde */
         }
         
         .logo-cert { height: 80px; width: auto; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
@@ -30,7 +31,7 @@
 <body>
     <nav class="navbar fixed-top navbar-dark">
         <div class="container-fluid d-flex justify-content-center align-items-center">
-            <img src="logo.png" id="logoNav" class="logo-nav" alt="" onerror="this.style.display='none'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Logo_INEA_nominativo.png/800px-Logo_INEA_nominativo.png" id="logoNav" class="logo-nav" alt="INEA">
             <a class="navbar-brand" style="color: #FFFFFF">Validación de certificados INEA</a>
         </div>
     </nav>
@@ -44,7 +45,7 @@
                     <div class="card p-4">
                         <div class="text-start mb-3">
                             <b>Folio:</b>
-                            <input type="text" id="FolioInput" class="form-control form-control-lg" />
+                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ingrese el folio aquí" />
                         </div>
                         <button type="button" onclick="validarFolio()" class="btn btn-success btn-lg w-100">Verificar</button>
                     </div>
@@ -60,7 +61,7 @@
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    <img src="logo.png" class="logo-cert" alt="" onerror="this.style.display='none'">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Logo_INEA_nominativo.png/800px-Logo_INEA_nominativo.png" class="logo-cert" alt="INEA">
                     <h4 class="mb-0" style="color: #285C4D;">INSTITUTO NACIONAL PARA LA EDUCACIÓN DE LOS ADULTOS</h4>
                 </div>
                 <div class="card-body p-4">
@@ -89,11 +90,10 @@
     </footer>
 
     <script>
-        // ... (Base de datos se mantiene igual)
         const baseDatos = {
             "9da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274" },
             "8ea8226f-5f07-41cc-81f6-23cb903e7500": { nombre: "CARLOS ALBERTO MEZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2024-10-15", emision: "2024-10-20", lugar: "CIUDAD DE MÉXICO", id: "0511255380" },
-            "folio-inf-01": { nombre: "JUAN PABLO RAMIREZ LUNA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "PUEBLA, PUE", id: "0915255721" },
+           "8da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JUAN PABLO RAMIREZ LUNA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "PUEBLA, PUE", id: "0915255721" },
             "folio-inf-02": { nombre: "MARIA FERNANDA GOMEZ", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2024-11-15", emision: "2024-11-20", lugar: "VERACRUZ, VER", id: "1319256162" },
             "folio-inf-03": { nombre: "RICARDO TREJO ORTIZ", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "GUADALAJARA, JAL", id: "1420256273" },
             "folio-inf-04": { nombre: "ANA BEATRIZ SOLIS", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2024-10-20", emision: "2024-10-25", lugar: "MERIDA, YUC", id: "1521256384" },
@@ -109,7 +109,7 @@
             "folio-inf-14": { nombre: "TERESA DE JESUS DIAZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "COLIMA, COL", id: "2531257384" },
             "folio-inf-15": { nombre: "MIGUEL ANGEL DURAN", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2024-11-30", emision: "2024-12-05", lugar: "CHICOLOAPAN, MEX", id: "2632257495" },
             "folio-inf-16": { nombre: "XIMENA NAVARRO GIL", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "MORELIA, MICH", id: "2733257606" },
-            "folio-inf-17": { nombre: "RAUL IVAN FUENTES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
+            "folio-inf-17": { nombre: "RAUL IVAN FLORES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
             "folio-inf-18": { nombre: "KARLA ESTEFANIA LUZ", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2024-10-05", emision: "2024-10-10", lugar: "CHETUMAL, QR", id: "2935257828" },
             "folio-inf-19": { nombre: "OSCAR TOMAS MENDOZA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-25", emision: "2024-11-30", lugar: "TEPIC, NAY", id: "3036257939" },
             "folio-inf-20": { nombre: "VALERIA MONTSERRAT", nivel: "PRIMARIA", promedio: "9.3", conclusion: "2025-01-08", emision: "2025-01-13", lugar: "LA PAZ, BCS", id: "3137258040" },
@@ -138,7 +138,7 @@
                 document.getElementById('lblID').innerText = d.id;
                 document.getElementById('lblFolio').innerText = fInput.toUpperCase();
                 
-                // OCULTAR BUSQUEDA Y MOSTRAR RESULTADOS
+                // Cambios de visibilidad
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 
