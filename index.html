@@ -6,18 +6,18 @@
     <title>Portal Mi Certificado En Línea - INEA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { padding-top: 80px; background-color: #fcfcfc; font-family: 'Arial', sans-serif; }
+        body { padding-top: 80px; background-color: #f8f9fa; font-family: 'Arial', sans-serif; }
         .navbar { background-color: #285C4D !important; }
         #DatosCertificado { display: none; margin-bottom: 50px; }
-        .card { border: 1px solid #ccc; border-radius: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .card-header { background-color: #ffffff !important; border-bottom: 2px solid #285C4D; padding: 25px; }
-        .table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 15px; }
-        .table b { color: #333; }
+        .card { border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .card-header { background-color: #ffffff !important; border-bottom: 2px solid #285C4D; padding: 20px; }
+        .table td { padding: 12px; border-bottom: 1px solid #dee2e6; }
         #lblFolio { word-break: break-all; color: #9D2449; font-family: monospace; font-weight: bold; }
-        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; font-weight: bold; }
+        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
         
+        /* Ajuste del logo para que siempre sea visible */
         .logo-inea {
-            max-width: 280px;
+            width: 280px;
             height: auto;
             display: block;
             margin: 0 auto;
@@ -30,13 +30,12 @@
     </nav>
 
     <div id="Busqueda">
-        <div class="container text-center mt-4">
+        <div class="container text-center mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <h2 style="font-weight: 500; color: #285C4D;">Validación de certificado</h2>
-                    <p>&nbsp;</p>
-                    <p class="text-muted">Ingrese el número de folio para confirmar la validez del documento.</p>
-                    <div class="card p-4 shadow-sm">
+                    <h2 style="color: #285C4D">Validación de certificado</h2>
+                    <p class="text-muted mt-4">Ingrese el número de folio para confirmar la validez del documento.</p>
+                    <div class="card p-4 mt-2">
                         <div class="text-start mb-3">
                             <b>Folio:</b>
                             <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ej: INEA-2601">
@@ -55,10 +54,10 @@
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/INEA_logo.svg/512px-INEA_logo.svg.png" class="logo-inea" alt="Logo INEA">
+                    <img class="logo-inea" alt="Logo INEA" src="data:image/png;base64,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" />
                 </div>
                 <div class="card-body">
-                    <p class="text-center"><b>DATOS DEL CERTIFICADO ENCONTRADO</b></p>
+                    <p class="text-center"><b>DATOS DEL CERTIFICADO</b></p>
                     <table class="table">
                         <tr><td style="width: 45%;"><b>Nombre:</b></td><td><span id="lblNombre"></span></td></tr>
                         <tr><td><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
@@ -71,15 +70,15 @@
                         <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
                         <tr><td><b>Autoridad educativa:</b></td><td>JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</td></tr>
                         <tr><td><b>No. Certificado Autoridad:</b></td><td>00001000000519186162</td></tr>
-                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Validar en SEP</a></td></tr>
+                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Liga oficial SIGED</a></td></tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-3 mt-5">
-        <p class="text-center text-muted border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
+    <footer class="py-3 mt-5 text-center text-muted border-top">
+        2026 - Instituto Nacional para la Educación de los Adultos
     </footer>
 
     <script>
@@ -117,12 +116,11 @@
                 document.getElementById('lblLugar').innerText = d.lugar;
                 document.getElementById('lblID').innerText = d.id;
                 document.getElementById('lblFolio').innerText = d.folio;
-                
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 window.scrollTo(0,0);
             } else {
-                alert("Folio no encontrado. Intente con INEA-2601 al INEA-2619");
+                alert("Folio no encontrado. Intente del INEA-2601 al INEA-2619");
             }
         }
 
