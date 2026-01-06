@@ -6,24 +6,21 @@
     <title>Portal Mi Certificado En Línea - INEA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { padding-top: 80px; background-color: #f8f9fa; font-family: 'Arial', sans-serif; }
+        body { padding-top: 80px; background-color: #fcfcfc; font-family: 'Arial', sans-serif; }
         .navbar { background-color: #285C4D !important; }
-        
-        /* Contenedores de vistas */
         #DatosCertificado { display: none; margin-bottom: 50px; }
+        .card { border: 1px solid #ccc; border-radius: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .card-header { background-color: #ffffff !important; border-bottom: 2px solid #285C4D; padding: 25px; }
+        .table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 15px; }
+        .table b { color: #333; }
+        #lblFolio { word-break: break-all; color: #9D2449; font-family: monospace; font-weight: bold; }
+        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; font-weight: bold; }
         
-        /* Estilo de la Tarjeta y Tabla */
-        .card { border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .card-header { background-color: #ffffff !important; border-bottom: 2px solid #285C4D; padding: 20px; }
-        .table td { padding: 12px; border-bottom: 1px solid #dee2e6; }
-        
-        /* Estilo de los textos */
-        #lblFolio { word-break: break-all; color: #333; font-family: monospace; font-weight: bold; }
-        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
-
         .logo-inea {
-            width: 220px;
+            max-width: 280px;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -33,17 +30,19 @@
     </nav>
 
     <div id="Busqueda">
-        <div class="container text-center mt-5">
+        <div class="container text-center mt-4">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <h2>Validación de certificado</h2>
+                    <h2 style="font-weight: 500; color: #285C4D;">Validación de certificado</h2>
                     <p>&nbsp;</p>
-                    <p class="text-muted text-center">Esta opción te permite confirmar los datos y la validez de tu certificado, para ello ingresa el número de folio en el recuadro de abajo y posteriormente da clic al botón de Verificar.</p>
-                    <div class="text-start mb-3">
-                        <b>Folio:</b>
-                        <input type="text" id="FolioInput" class="form-control" placeholder="Ejemplo: INEA-001">
+                    <p class="text-muted">Ingrese el número de folio para confirmar la validez del documento.</p>
+                    <div class="card p-4 shadow-sm">
+                        <div class="text-start mb-3">
+                            <b>Folio:</b>
+                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ej: INEA-2601">
+                        </div>
+                        <button type="button" onclick="validar()" class="btn btn-success w-100 py-2">Verificar</button>
                     </div>
-                    <button type="button" onclick="consultar()" class="btn btn-success w-100 py-2">Verificar</button>
                 </div>
             </div>
         </div>
@@ -52,104 +51,64 @@
     <div id="DatosCertificado">
         <div class="container">
             <div class="text-center mb-3">
-                <button class="btn btn-outline-secondary btn-sm" onclick="volver()">← Realizar otra búsqueda</button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="regresar()">← Nueva Consulta</button>
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    <img src="https://itpachuca.edu.mx/wp-content/uploads/2019/07/inea.png" class="logo-inea" alt="Logo INEA">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/INEA_logo.svg/512px-INEA_logo.svg.png" class="logo-inea" alt="Logo INEA">
                 </div>
                 <div class="card-body">
-                    <p class="text-center"><b>DATOS DEL CERTIFICADO</b></p>
+                    <p class="text-center"><b>DATOS DEL CERTIFICADO ENCONTRADO</b></p>
                     <table class="table">
-                        <tr>
-                            <td style="width: 45%;"><b>Nombre:</b></td>
-                            <td><span id="lblNombre"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Nivel:</b></td>
-                            <td><span id="lblNivel"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Promedio:</b></td>
-                            <td><span id="lblPromedio"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Fecha de conclusión de estudios:</b></td>
-                            <td><span id="lblConclusion"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Tipo de documento:</b></td>
-                            <td><span id="lblTipoDoc">CERTIFICADO</span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Fecha de emisión:</b></td>
-                            <td><span id="lblEmision"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Lugar de emisión:</b></td>
-                            <td><span id="lblLugar"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Folio:</b></td>
-                            <td><span id="lblFolio"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>ID:</b></td>
-                            <td><span id="lblID"></span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Autoridad educativa:</b></td>
-                            <td><span id="lblAutoridad">JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</span></td>
-                        </tr>
-                        <tr>
-                            <td><b>No. de certificado autoridad educativa:</b></td>
-                            <td><span id="lblCertificadoAutoridad">00001000000519186162</span></td>
-                        </tr>
-                        <tr>
-                            <td><b>Validación SIGED:</b></td>
-                            <td>
-                                <a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Liga de validación</a>
-                            </td>
-                        </tr>
+                        <tr><td style="width: 45%;"><b>Nombre:</b></td><td><span id="lblNombre"></span></td></tr>
+                        <tr><td><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
+                        <tr><td><b>Promedio:</b></td><td><span id="lblPromedio"></span></td></tr>
+                        <tr><td><b>Fecha de conclusión:</b></td><td><span id="lblConclusion"></span></td></tr>
+                        <tr><td><b>Tipo de documento:</b></td><td><b>CERTIFICADO</b></td></tr>
+                        <tr><td><b>Fecha de emisión:</b></td><td><span id="lblEmision"></span></td></tr>
+                        <tr><td><b>Lugar de emisión:</b></td><td><span id="lblLugar"></span></td></tr>
+                        <tr><td><b>Folio:</b></td><td><span id="lblFolio"></span></td></tr>
+                        <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
+                        <tr><td><b>Autoridad educativa:</b></td><td>JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</td></tr>
+                        <tr><td><b>No. Certificado Autoridad:</b></td><td>00001000000519186162</td></tr>
+                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Validar en SEP</a></td></tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-3 my-4">
-        <p class="text-center text-body-secondary border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
+    <footer class="py-3 mt-5">
+        <p class="text-center text-muted border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
     </footer>
 
     <script>
-        // Base de Datos de los 19 Folios
         const baseDatos = {
-            "INEA-001": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274", folio: "9da9226f-6e07-41cc-81f6-23cb903e6593" },
-            "INEA-002": { nombre: "CARLOS MEZA GALVAN", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2024-10-12", emision: "2024-10-18", lugar: "CIUDAD DE MÉXICO", id: "0511266385", folio: "8ea8226f-5f07-41cc-81f6-23cb903e7500" },
-            "INEA-003": { nombre: "BEATRIZ ELENA RIVAS", nivel: "SECUNDARIA", promedio: "9.2", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "MONTERREY, NL", id: "0612277496", folio: "7fa7226f-4e07-41cc-81f6-23cb903e8511" },
-            "INEA-004": { nombre: "DANIEL ORTEGA SOLIS", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "GUADALAJARA, JAL", id: "0713288507", folio: "6ga6226f-3d07-41cc-81f6-23cb903e9522" },
-            "INEA-005": { nombre: "ELENA GOMEZ MARIN", nivel: "PRIMARIA", promedio: "7.9", conclusion: "2024-11-15", emision: "2024-11-20", lugar: "MÉRIDA, YUC", id: "0814299618", folio: "5ha5226f-2c07-41cc-81f6-23cb903e0533" },
-            "INEA-006": { nombre: "FERNANDO DURAN LUNA", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "PUEBLA, PUE", id: "0915300729", folio: "4ia4226f-1b07-41cc-81f6-23cb903e1544" },
-            "INEA-007": { nombre: "GLORIA TREJO REYES", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-09-10", emision: "2024-09-15", lugar: "TIJUANA, BCN", id: "1016311830", folio: "3ja3226f-0a07-81cc-41f6-23cb903e2555" },
-            "INEA-008": { nombre: "HUGO SANCHEZ PEÑA", nivel: "PRIMARIA", promedio: "7.6", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "TOLUCA, MEX", id: "1117322941", folio: "2ka2226f-9z07-41cc-81f6-23cb903e3566" },
-            "INEA-009": { nombre: "IRENE SOSA CASTRO", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2025-01-28", emision: "2025-02-02", lugar: "QUERÉTARO, QRO", id: "1218333052", folio: "1la1226f-8y07-41cc-81f6-23cb903e4577" },
-            "INEA-010": { nombre: "JORGE LUIS MORENO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2024-08-15", emision: "2024-08-20", lugar: "VERACRUZ, VER", id: "1319344163", folio: "0ma0226f-7x07-41cc-81f6-23cb903e5588" },
-            "INEA-011": { nombre: "KARLA VENEGAS TORRES", nivel: "PRIMARIA", promedio: "8.7", conclusion: "2024-12-10", emision: "2024-12-15", lugar: "OAXACA, OAX", id: "1420355274", folio: "9na9226f-6w07-41cc-81f6-23cb903e6599" },
-            "INEA-012": { nombre: "LUIS ROBLES DIAZ", nivel: "SECUNDARIA", promedio: "7.8", conclusion: "2024-10-05", emision: "2024-10-10", lugar: "TABASCO, VHSA", id: "1521366385", folio: "8oa8226f-5v07-41cc-81f6-23cb903e7600" },
-            "INEA-013": { nombre: "MARIA JOSE LOPEZ", nivel: "SECUNDARIA", promedio: "9.9", conclusion: "2025-01-12", emision: "2025-01-17", lugar: "CHIAPAS, TGZ", id: "1622377496", folio: "7pa7226f-4u07-41cc-81f6-23cb903e8611" },
-            "INEA-014": { nombre: "OSCAR TELLEZ RUIZ", nivel: "PRIMARIA", promedio: "8.1", conclusion: "2024-11-18", emision: "2024-11-23", lugar: "AGUASCALIENTES, AGS", id: "1723388507", folio: "6qa6226f-3t07-41cc-81f6-23cb903e9622" },
-            "INEA-015": { nombre: "PATRICIA VEGA MARIN", nivel: "SECUNDARIA", promedio: "9.4", conclusion: "2024-12-20", emision: "2024-12-25", lugar: "COAHUILA, SALT", id: "1824399618", folio: "5ra5226f-2s07-41cc-81f6-23cb903e0633" },
-            "INEA-016": { nombre: "RICARDO FLORES SANCHEZ", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2024-09-05", emision: "2024-09-10", lugar: "COLIMA, COL", id: "1925400729", folio: "4sa4226f-1r07-41cc-81f6-23cb9031644" },
-            "INEA-017": { nombre: "SOFIA REYES PALACIOS", nivel: "PRIMARIA", promedio: "7.7", conclusion: "2024-11-30", emision: "2024-12-05", lugar: "ZACATECAS, ZAC", id: "2026411830", folio: "3ta3226f-0q07-41cc-81f6-23cb9032655" },
-            "INEA-018": { nombre: "TOMAS GALVAN HERRERA", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "SONORA, HERM", id: "2127422941", folio: "2ua2226f-9p07-41cc-81f6-23cb9033666" },
-            "INEA-019": { nombre: "VICTOR MANUEL SOSA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "BCS, LA PAZ", id: "2228433052", folio: "1va1226f-8o07-41cc-81f6-23cb9034677" }
+            "INEA-2601": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274", folio: "9da9226f-6e07-41cc-81f6-23cb903e6593" },
+            "INEA-2602": { nombre: "CARLOS ALBERTO MEZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2024-10-15", emision: "2024-10-20", lugar: "CIUDAD DE MÉXICO", id: "0511255380", folio: "8ba8226f-5f07-31cc-91f6-12cb903e6580" },
+            "INEA-2603": { nombre: "BEATRIZ ELENA RIVAS", nivel: "PRIMARIA", promedio: "9.2", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MONTERREY, NUEVO LEÓN", id: "0612255490", folio: "7ca7226f-4e07-21cc-81f6-01cb903e6570" },
+            "INEA-2604": { nombre: "DANIEL ORTEGA SOLIS", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "GUADALAJARA, JALISCO", id: "0713255500", folio: "6db6226f-3d07-11cc-71f6-92cb903e6560" },
+            "INEA-2605": { nombre: "ELENA GOMEZ MARIN", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2024-11-20", emision: "2024-11-25", lugar: "MÉRIDA, YUCATÁN", id: "0814255610", folio: "5ea5226f-2c07-01cc-61f6-83cb903e6550" },
+            "INEA-2606": { nombre: "FERNANDO DURAN LUNA", nivel: "PRIMARIA", promedio: "8.8", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "PUEBLA, PUEBLA", id: "0915255720", folio: "4fb4226f-1b07-91cc-51f6-74cb903e6540" },
+            "INEA-2607": { nombre: "GLORIA TREJO REYES", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-09-12", emision: "2024-09-18", lugar: "TIJUANA, BCN", id: "1016255830", folio: "3ga3226f-0a07-81cc-41f6-65cb903e6530" },
+            "INEA-2608": { nombre: "HUGO SANCHEZ PEÑA", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "TOLUCA, ESTADO DE MÉXICO", id: "1117255940", folio: "2ha2226f-9z07-71cc-31f6-56cb903e6520" },
+            "INEA-2609": { nombre: "IRENE SOSA CASTRO", nivel: "PRIMARIA", promedio: "8.3", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "QUERÉTARO, QRO", id: "1218256050", folio: "1ia1226f-8y07-61cc-21f6-47cb903e6510" },
+            "INEA-2610": { nombre: "JORGE LUIS MORENO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2024-08-30", emision: "2024-09-05", lugar: "VERACRUZ, VER", id: "1319256160", folio: "0ja0226f-7x07-51cc-11f6-38cb903e6500" },
+            "INEA-2611": { nombre: "KARLA VENEGAS TORRES", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "OAXACA, OAX", id: "1420256270", folio: "9ka9226f-6w07-41cc-01f6-29cb903e6490" },
+            "INEA-2612": { nombre: "LUIS ROBLES DIAZ", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-10-30", emision: "2024-11-05", lugar: "TABASCO, VHSA", id: "1521256380", folio: "8la8226f-5v07-31cc-91f6-10cb903e6480" },
+            "INEA-2613": { nombre: "MARIA JOSE LOPEZ", nivel: "SECUNDARIA", promedio: "9.9", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "CHIAPAS, TGZ", id: "1622256490", folio: "7ma7226f-4u07-21cc-81f6-01cb903e6470" },
+            "INEA-2614": { nombre: "OSCAR TELLEZ RUIZ", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2024-11-11", emision: "2024-11-16", lugar: "AGUASCALIENTES, AGS", id: "1723256500", folio: "6na6226f-3t07-11cc-71f6-92cb903e6460" },
+            "INEA-2615": { nombre: "PATRICIA VEGA MARIN", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2024-12-28", emision: "2025-01-02", lugar: "SALTILLO, COAHUILA", id: "1824256610", folio: "5oa5226f-2s07-01cc-61f6-83cb903e6450" },
+            "INEA-2616": { nombre: "RICARDO FLORES SANCHEZ", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2024-09-25", emision: "2024-09-30", lugar: "COLIMA, COL", id: "1925256720", folio: "4pa4226f-1r07-91cc-51f6-74cb903e6440" },
+            "INEA-2617": { nombre: "SOFIA REYES PALACIOS", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-15", emision: "2024-11-20", lugar: "ZACATECAS, ZAC", id: "2026256830", folio: "3qa3226f-0q07-81cc-41f6-65cb903e6430" },
+            "INEA-2618": { nombre: "TOMAS GALVAN HERRERA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "HERMOSILLO, SONORA", id: "2127256940", folio: "2ra2226f-9p07-71cc-31f6-56cb903e6420" },
+            "INEA-2619": { nombre: "VICTOR MANUEL SOSA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-01", emision: "2024-12-05", lugar: "LA PAZ, BCS", id: "2228257050", folio: "1sa1226f-8o07-61cc-21f6-47cb903e6410" }
         };
 
-        function consultar() {
+        function validar() {
             const f = document.getElementById('FolioInput').value.trim().toUpperCase();
             if(baseDatos[f]) {
                 const d = baseDatos[f];
-                // Inyectar Datos
                 document.getElementById('lblNombre').innerText = d.nombre;
                 document.getElementById('lblNivel').innerText = d.nivel;
                 document.getElementById('lblPromedio').innerText = d.promedio;
@@ -159,16 +118,15 @@
                 document.getElementById('lblID').innerText = d.id;
                 document.getElementById('lblFolio').innerText = d.folio;
                 
-                // Mostrar resultados
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 window.scrollTo(0,0);
             } else {
-                alert("Folio no encontrado. Intente con INEA-001 al INEA-019");
+                alert("Folio no encontrado. Intente con INEA-2601 al INEA-2619");
             }
         }
 
-        function volver() {
+        function regresar() {
             document.getElementById('Busqueda').style.display = 'block';
             document.getElementById('DatosCertificado').style.display = 'none';
             document.getElementById('FolioInput').value = "";
