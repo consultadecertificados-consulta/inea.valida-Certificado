@@ -6,22 +6,23 @@
     <title>Portal Mi Certificado En Línea - INEA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { padding-top: 80px; background-color: #fcfcfc; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { padding-top: 80px; background-color: #f8f9fa; font-family: 'Arial', sans-serif; }
         .navbar { background-color: #285C4D !important; }
-        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
         
+        /* Contenedores de vistas */
         #DatosCertificado { display: none; margin-bottom: 50px; }
         
-        .card { border: 1px solid #ccc; border-radius: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .card-header { background-color: #ffffff !important; border-bottom: 1px solid #eee; padding: 25px; }
+        /* Estilo de la Tarjeta y Tabla */
+        .card { border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .card-header { background-color: #ffffff !important; border-bottom: 2px solid #285C4D; padding: 20px; }
+        .table td { padding: 12px; border-bottom: 1px solid #dee2e6; }
         
-        .table td { padding: 12px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
-        .table b { color: #333; }
-        
+        /* Estilo de los textos */
         #lblFolio { word-break: break-all; color: #333; font-family: monospace; font-weight: bold; }
-        
+        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
+
         .logo-inea {
-            width: 200px; /* Tamaño ideal para el logo */
+            width: 220px;
             height: auto;
         }
     </style>
@@ -32,19 +33,17 @@
     </nav>
 
     <div id="Busqueda">
-        <div class="container text-center mt-4">
+        <div class="container text-center mt-5">
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <h2 style="font-weight: 500; color: #285C4D;">Validación de certificado</h2>
+                    <h2>Validación de certificado</h2>
                     <p>&nbsp;</p>
-                    <p class="text-muted">Ingresa el número de folio en el recuadro de abajo y haz clic en el botón de Verificar.</p>
-                    <div class="card p-4 shadow-sm">
-                        <div class="text-start mb-3">
-                            <b>Folio:</b>
-                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ej: INEA-001">
-                        </div>
-                        <button type="button" onclick="validar()" class="btn btn-success w-100 py-2">Verificar</button>
+                    <p class="text-muted text-center">Esta opción te permite confirmar los datos y la validez de tu certificado, para ello ingresa el número de folio en el recuadro de abajo y posteriormente da clic al botón de Verificar.</p>
+                    <div class="text-start mb-3">
+                        <b>Folio:</b>
+                        <input type="text" id="FolioInput" class="form-control" placeholder="Ejemplo: INEA-001">
                     </div>
+                    <button type="button" onclick="consultar()" class="btn btn-success w-100 py-2">Verificar</button>
                 </div>
             </div>
         </div>
@@ -53,40 +52,77 @@
     <div id="DatosCertificado">
         <div class="container">
             <div class="text-center mb-3">
-                <button class="btn btn-outline-secondary btn-sm" onclick="regresar()">← Realizar otra consulta</button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="volver()">← Realizar otra búsqueda</button>
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACfCAMAAABmv999AAAAVFBMVEX///8AAAD8/Pz5+fn29vbz8/P09PTx8fHs7Ozv7+/m5ubk5OTj4+Pg4ODS0tLQ0NDJycnGxsbBwcG/v7+7u7u5ubm2tra0tLSvr6+rq6umpqafn596Y9scAAAByUlEQVR4nO3Z2XLCMAxG4Xid0mSllEKL93/atidAAm0p8YxGZ74vXIn9S6M4SZYAAAAAAAAAAAAAAAAAAMAb8u2rXf6O6mFv5rN9X02Lq9T1pCrr6vMof2N9O5mN69p8pU9f7fIn1Nf5+HwVq9vJ+HyvX09X09vYfK9fT1fTm9h8r19PV9Ob2HyvX8/K6m5mO/6H6uvofmZrfW8GAAAAAAAAAAAAAAAAAMAb8u2rXf6O6mFv5rN9X02Lq9T1pCrr6vMof2N9O5mN69p8pU9f7fIn1Nf5+HwVq9vJ+HyvX09X09vYfK9fT1fTm9h8r19PV9Ob2HyvX8/K6m5mO/6H6uvofmZrfW8GAAAAAAAAAAAAAAAAAMAb8u2rXf6O6mFv5rN9X02Lq9T1pCrr6vMof2N9O5mN69p8pU9f7fIn1Nf5+HwVq9vJ+HyvX09X09vYfK9fT1fTm9h8r19PV9Ob2HyvX8/K6m5mO/6H6uvofmZrfW8GAAAAAAAAAAAAAAAAAMAb8u2rXf6O6mFv5rN9X02Lq9T1pCrr6vMof2N9O5mN69p8pU9f7fIn1Nf5+HwVq9vJ+HyvX09X09vYfK9fT1fTm9h8r19PV9Ob2HyvX8/K6m5mO/6H6uvofmZrfW8GAAAAAAAAAAAAAAAgH/iC8/8ClWf99mMAAAAAElFTkSuQmCC" 
-                         class="logo-inea" alt="Logo INEA Oficial">
-                    <div style="font-weight: bold; color: #285C4D; font-size: 22px; margin-top: 5px;">INEA</div>
+                    <img src="https://itpachuca.edu.mx/wp-content/uploads/2019/07/inea.png" class="logo-inea" alt="Logo INEA">
                 </div>
                 <div class="card-body">
-                    <p class="text-center"><b>DATOS DEL CERTIFICADO ENCONTRADO</b></p>
+                    <p class="text-center"><b>DATOS DEL CERTIFICADO</b></p>
                     <table class="table">
-                        <tr><td style="width: 45%;"><b>Nombre:</b></td><td><span id="lblNombre"></span></td></tr>
-                        <tr><td><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
-                        <tr><td><b>Promedio:</b></td><td><span id="lblPromedio"></span></td></tr>
-                        <tr><td><b>Fecha de conclusión:</b></td><td><span id="lblConclusion"></span></td></tr>
-                        <tr><td><b>Tipo de documento:</b></td><td><b>CERTIFICADO</b></td></tr>
-                        <tr><td><b>Fecha de emisión:</b></td><td><span id="lblEmision"></span></td></tr>
-                        <tr><td><b>Lugar de emisión:</b></td><td><span id="lblLugar"></span></td></tr>
-                        <tr><td><b>Folio:</b></td><td><span id="lblFolio"></span></td></tr>
-                        <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
-                        <tr><td><b>Autoridad educativa:</b></td><td>JORGE ALBERTO SANMIGUEL WONG</td></tr>
-                        <tr><td><b>No. Certificado Autoridad:</b></td><td>00001000000519186162</td></tr>
-                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://siged.sep.gob.mx" target="_blank">Liga de validación</a></td></tr>
+                        <tr>
+                            <td style="width: 45%;"><b>Nombre:</b></td>
+                            <td><span id="lblNombre"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Nivel:</b></td>
+                            <td><span id="lblNivel"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Promedio:</b></td>
+                            <td><span id="lblPromedio"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Fecha de conclusión de estudios:</b></td>
+                            <td><span id="lblConclusion"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Tipo de documento:</b></td>
+                            <td><span id="lblTipoDoc">CERTIFICADO</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Fecha de emisión:</b></td>
+                            <td><span id="lblEmision"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Lugar de emisión:</b></td>
+                            <td><span id="lblLugar"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Folio:</b></td>
+                            <td><span id="lblFolio"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>ID:</b></td>
+                            <td><span id="lblID"></span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Autoridad educativa:</b></td>
+                            <td><span id="lblAutoridad">JORGE ALBERTO SANMIGUEL WONG, DIRECTOR GENERAL</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>No. de certificado autoridad educativa:</b></td>
+                            <td><span id="lblCertificadoAutoridad">00001000000519186162</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>Validación SIGED:</b></td>
+                            <td>
+                                <a href="https://siged.sep.gob.mx/SIGED/documentos.html" target="_blank">Liga de validación</a>
+                            </td>
+                        </tr>
                     </table>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-3 mt-5">
-        <p class="text-center text-muted border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
+    <footer class="py-3 my-4">
+        <p class="text-center text-body-secondary border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
     </footer>
 
     <script>
+        // Base de Datos de los 19 Folios
         const baseDatos = {
             "INEA-001": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274", folio: "9da9226f-6e07-41cc-81f6-23cb903e6593" },
             "INEA-002": { nombre: "CARLOS MEZA GALVAN", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2024-10-12", emision: "2024-10-18", lugar: "CIUDAD DE MÉXICO", id: "0511266385", folio: "8ea8226f-5f07-41cc-81f6-23cb903e7500" },
@@ -109,10 +145,11 @@
             "INEA-019": { nombre: "VICTOR MANUEL SOSA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "BCS, LA PAZ", id: "2228433052", folio: "1va1226f-8o07-41cc-81f6-23cb9034677" }
         };
 
-        function validar() {
+        function consultar() {
             const f = document.getElementById('FolioInput').value.trim().toUpperCase();
             if(baseDatos[f]) {
                 const d = baseDatos[f];
+                // Inyectar Datos
                 document.getElementById('lblNombre').innerText = d.nombre;
                 document.getElementById('lblNivel').innerText = d.nivel;
                 document.getElementById('lblPromedio').innerText = d.promedio;
@@ -122,15 +159,16 @@
                 document.getElementById('lblID').innerText = d.id;
                 document.getElementById('lblFolio').innerText = d.folio;
                 
+                // Mostrar resultados
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 window.scrollTo(0,0);
             } else {
-                alert("Folio no encontrado. Pruebe con INEA-001 al INEA-019");
+                alert("Folio no encontrado. Intente con INEA-001 al INEA-019");
             }
         }
 
-        function regresar() {
+        function volver() {
             document.getElementById('Busqueda').style.display = 'block';
             document.getElementById('DatosCertificado').style.display = 'none';
             document.getElementById('FolioInput').value = "";
