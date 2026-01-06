@@ -1,63 +1,134 @@
-<script>
-    // Se corrigieron errores de sintaxis y claves duplicadas
-    const baseDatos = {
-        "9da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274" },
-        "8ea8226f-5f07-41cc-81f6-23cb903e7500": { nombre: "ITZAYANA ITZEL TRUJILLO SANCHEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-10-15", emision: "2025-10-20", lugar: "TULTEPEC, ESTADO DE MEXICO", id: "0511255380" },
-        "8da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ROQUE CARLOS CANTE KANTUN", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-10", emision: "2025-11-15", lugar: "MERIDA, YUCATAN", id: "1420256273" },
-        "7da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "BRENDA GUADALUPE BAZALDUA MARTINEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, NL", id: "1319256162" },
-        "folio-inf-04": { nombre: "ANA BEATRIZ SOLIS", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2024-10-20", emision: "2024-10-25", lugar: "MERIDA, YUC", id: "1521256384" },
-        "folio-inf-05": { nombre: "LUIS FELIPE CANO", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2024-12-12", emision: "2024-12-18", lugar: "MONTERREY, NL", id: "1622256495" },
-        "folio-inf-06": { nombre: "GABRIELA MEJIA RUIZ", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "QUERETARO, QRO", id: "1723256506" },
-        "folio-inf-07": { nombre: "HECTOR DAVID FLORES", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2024-09-30", emision: "2024-10-05", lugar: "TIJUANA, BC", id: "1824256617" },
-        "folio-inf-08": { nombre: "SOFIA ELENA PAREDES", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2024-11-08", emision: "2024-11-13", lugar: "TOLUCA, MEX", id: "1925256728" },
-        "folio-inf-09": { nombre: "MANUEL ALEJANDRO VELA", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2024-12-20", emision: "2024-12-26", lugar: "OAXACA, OAX", id: "2026256839" },
-        "folio-inf-10": { nombre: "CARMEN LUCIA RIOS", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-01-15", emision: "2025-01-20", lugar: "CANCUN, QR", id: "2127256940" },
-        "folio-inf-11": { nombre: "ROBERTO CARLOS PENA", nivel: "PRIMARIA", promedio: "7.5", conclusion: "2024-08-25", emision: "2024-08-30", lugar: "SALTILLO, COAH", id: "2228257051" },
-        "folio-inf-12": { nombre: "DIANA PATRICIA SOSA", nivel: "SECUNDARIA", promedio: "9.2", conclusion: "2024-10-10", emision: "2024-10-15", lugar: "AGUASCALIENTES, AGS", id: "2329257162" },
-        "folio-inf-13": { nombre: "EDUARDO JAVIER MORA", nivel: "SECUNDARIA", promedio: "8.4", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "PACHUCA, HGO", id: "2430257273" },
-        "folio-inf-14": { nombre: "TERESA DE JESUS DIAZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "COLIMA, COL", id: "2531257384" },
-        "folio-inf-15": { nombre: "MIGUEL ANGEL DURAN", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2024-11-30", emision: "2024-12-05", lugar: "CHICOLOAPAN, MEX", id: "2632257495" },
-        "folio-inf-16": { nombre: "XIMENA NAVARRO GIL", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "MORELIA, MICH", id: "2733257606" },
-        "folio-inf-17": { nombre: "RAUL IVAN FLORES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
-        "folio-inf-28": { nombre: "ESTHER NOEMI LOPEZ", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-30", emision: "2025-01-05", lugar: "GUANAJUATO, GTO", id: "3945258928" },
-        "folio-inf-30": { nombre: "SANDRA LUZ MARTINEZ", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2024-10-28", emision: "2024-11-02", lugar: "LEON, GTO", id: "4147259140" }
-    };
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Mi Certificado En Línea - INEA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { padding-top: 70px; background-color: #ffffff; font-family: 'Arial', sans-serif; }
+        .navbar { background-color: #285C4D !important; }
+        .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
+        #DatosCertificado { display: none; margin-bottom: 50px; }
+        .card { border-radius: 0; border: 1px solid #ccc; box-shadow: none; }
+        .card-header { background-color: #fff !important; border-bottom: 2px solid #285C4D; padding: 15px; }
+        .table td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: middle; }
+        .table b { color: #333; }
+        #lblFolio { word-break: break-all; color: #333; font-weight: bold; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-dark">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <a class="navbar-brand" style="color: #FFFFFF">Validación de certificados INEA</a>
+        </div>
+    </nav>
 
-    function validarFolio() {
-        // Obtenemos el valor del input y limpiamos espacios
-        const inputElement = document.getElementById('FolioInput');
-        if (!inputElement) return;
+    <div id="Busqueda">
+        <div class="container text-center mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Validación de certificado</h2>
+                    <p class="text-muted">Esta opción te permite confirmar los datos y la validez de tu certificado, para ello ingresa el número de folio en el recuadro de abajo y posteriormente da clic al botón de Verificar.</p>
+                    <div class="card p-4">
+                        <div class="text-start mb-3">
+                            <b>Folio:</b>
+                            <input type="text" id="FolioInput" class="form-control form-control-lg" placeholder="Ingrese el folio aquí" onkeypress="if(event.key==='Enter') validarFolio()" />
+                        </div>
+                        <button type="button" onclick="validarFolio()" class="btn btn-success btn-lg w-100">Verificar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        const folioInput = inputElement.value.trim().toLowerCase();
+    <div id="DatosCertificado">
+        <div class="container">
+            <div class="text-center mb-3">
+                <button class="btn btn-outline-secondary btn-sm" onclick="regresarBusqueda()">← Realizar otra búsqueda</button>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">
+                    <h4 class="mb-0" style="color: #285C4D;">INSTITUTO NACIONAL PARA LA EDUCACIÓN DE LOS ADULTOS</h4>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-center mb-4"><b>DATOS DEL CERTIFICADO</b></p>
+                    <table class="table">
+                        <tr><td style="width: 45%;"><b>Nombre:</b></td><td><span id="lblNombre"></span></td></tr>
+                        <tr><td><b>Nivel:</b></td><td><span id="lblNivel"></span></td></tr>
+                        <tr><td><b>Promedio:</b></td><td><span id="lblPromedio"></span></td></tr>
+                        <tr><td><b>Fecha de conclusión de estudios:</b></td><td><span id="lblConclusion"></span></td></tr>
+                        <tr><td><b>Tipo de documento:</b></td><td>CERTIFICADO</td></tr>
+                        <tr><td><b>Fecha de emisión:</b></td><td><span id="lblEmision"></span></td></tr>
+                        <tr><td><b>Lugar de emisión:</b></td><td><span id="lblLugar"></span></td></tr>
+                        <tr><td><b>Folio:</b></td><td><span id="lblFolio"></span></td></tr>
+                        <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
+                        <tr><td><b>Autoridad educativa:</b></td><td>ARMANDO CONTRERAS CASTILLO, DIRECTOR GENERAL</td></tr>
+                        <tr><td><b>No. de certificado autoridad educativa:</b></td><td>00001000000519186162</td></tr>
+                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://aprendeinea.inea.gob.mx/" target="_blank">https://aprendeinea.inea.gob.mx/</a></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        // Verificamos si el folio existe en nuestra base de datos
-        if (baseDatos[folioInput]) {
-            const data = baseDatos[folioInput];
+    <footer class="py-3 my-4">
+        <p class="text-center text-body-secondary border-top pt-3">2026 - Instituto Nacional para la Educación de los Adultos</p>
+    </footer>
 
-            // Asignamos los valores a los elementos HTML
-            document.getElementById('lblNombre').innerText = data.nombre;
-            document.getElementById('lblNivel').innerText = data.nivel;
-            document.getElementById('lblPromedio').innerText = data.promedio;
-            document.getElementById('lblConclusion').innerText = data.conclusion;
-            document.getElementById('lblEmision').innerText = data.emision;
-            document.getElementById('lblLugar').innerText = data.lugar;
-            document.getElementById('lblFolio').innerText = folioInput.toUpperCase();
-            document.getElementById('lblID').innerText = data.id;
+    <script>
+        const baseDatos = {
+            "9da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VIANNEY VILLARREAL COTA", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2024-11-24", emision: "2024-11-29", lugar: "CAMPECHE, CAMPECHE", id: "0410255274" },
+            "8ea8226f-5f07-41cc-81f6-23cb903e7500": { nombre: "ITZAYANA ITZEL TRUJILLO SANCHEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-10-15", emision: "2025-10-20", lugar: "TULTEPEC, ESTADO DE MEXICO", id: "0511255380" },
+            "8da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ROQUE CARLOS CANTE KANTUN", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-10", emision: "2025-11-15", lugar: "MERIDA, YUCATAN", id: "1420256273" },
+            "7da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "BRENDA GUADALUPE BAZALDUA MARTINEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, NL", id: "1319256162" },
+            "folio-inf-04": { nombre: "ANA BEATRIZ SOLIS", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2024-10-20", emision: "2024-10-25", lugar: "MERIDA, YUC", id: "1521256384" },
+            "folio-inf-05": { nombre: "LUIS FELIPE CANO", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2024-12-12", emision: "2024-12-18", lugar: "MONTERREY, NL", id: "1622256495" },
+            "folio-inf-06": { nombre: "GABRIELA MEJIA RUIZ", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "QUERETARO, QRO", id: "1723256506" },
+            "folio-inf-07": { nombre: "HECTOR DAVID FLORES", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2024-09-30", emision: "2024-10-05", lugar: "TIJUANA, BC", id: "1824256617" },
+            "folio-inf-08": { nombre: "SOFIA ELENA PAREDES", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2024-11-08", emision: "2024-11-13", lugar: "TOLUCA, MEX", id: "1925256728" },
+            "folio-inf-09": { nombre: "MANUEL ALEJANDRO VELA", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2024-12-20", emision: "2024-12-26", lugar: "OAXACA, OAX", id: "2026256839" },
+            "folio-inf-10": { nombre: "CARMEN LUCIA RIOS", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-01-15", emision: "2025-01-20", lugar: "CANCUN, QR", id: "2127256940" },
+            "folio-inf-11": { nombre: "ROBERTO CARLOS PENA", nivel: "PRIMARIA", promedio: "7.5", conclusion: "2024-08-25", emision: "2024-08-30", lugar: "SALTILLO, COAH", id: "2228257051" },
+            "folio-inf-12": { nombre: "DIANA PATRICIA SOSA", nivel: "SECUNDARIA", promedio: "9.2", conclusion: "2024-10-10", emision: "2024-10-15", lugar: "AGUASCALIENTES, AGS", id: "2329257162" },
+            "folio-inf-13": { nombre: "EDUARDO JAVIER MORA", nivel: "SECUNDARIA", promedio: "8.4", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "PACHUCA, HGO", id: "2430257273" },
+            "folio-inf-14": { nombre: "TERESA DE JESUS DIAZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "COLIMA, COL", id: "2531257384" },
+            "folio-inf-15": { nombre: "MIGUEL ANGEL DURAN", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2024-11-30", emision: "2024-12-05", lugar: "CHICOLOAPAN, MEX", id: "2632257495" },
+            "folio-inf-16": { nombre: "XIMENA NAVARRO GIL", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "MORELIA, MICH", id: "2733257606" },
+            "folio-inf-17": { nombre: "RAUL IVAN FLORES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
+            "folio-inf-28": { nombre: "ESTHER NOEMI LOPEZ", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-30", emision: "2025-01-05", lugar: "GUANAJUATO, GTO", id: "3945258928" },
+            "folio-inf-30": { nombre: "SANDRA LUZ MARTINEZ", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2024-10-28", emision: "2024-11-02", lugar: "LEON, GTO", id: "4147259140" }
+        };
 
-            // Ocultamos el buscador y mostramos el resultado
-            document.getElementById('Busqueda').style.display = 'none';
-            document.getElementById('DatosCertificado').style.display = 'block';
+        function validarFolio() {
+            const input = document.getElementById('FolioInput');
+            const fInput = input.value.trim().toLowerCase();
             
-            // Subir al inicio de la página para ver el resultado
-            window.scrollTo(0, 0);
-        } else {
-            alert("Folio no encontrado. Verifique que esté bien escrito.");
+            if (baseDatos[fInput]) {
+                const d = baseDatos[fInput];
+                document.getElementById('lblNombre').innerText = d.nombre;
+                document.getElementById('lblNivel').innerText = d.nivel;
+                document.getElementById('lblPromedio').innerText = d.promedio;
+                document.getElementById('lblConclusion').innerText = d.conclusion;
+                document.getElementById('lblEmision').innerText = d.emision;
+                document.getElementById('lblLugar').innerText = d.lugar;
+                document.getElementById('lblID').innerText = d.id;
+                document.getElementById('lblFolio').innerText = fInput.toUpperCase();
+                
+                document.getElementById('Busqueda').style.display = 'none';
+                document.getElementById('DatosCertificado').style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                alert("Folio no válido o no encontrado en el sistema.");
+            }
         }
-    }
 
-    function regresarBusqueda() {
-        document.getElementById('Busqueda').style.display = 'block';
-        document.getElementById('DatosCertificado').style.display = 'none';
-        document.getElementById('FolioInput').value = "";
-    }
-</script>
+        function regresarBusqueda() {
+            document.getElementById('Busqueda').style.display = 'block';
+            document.getElementById('DatosCertificado').style.display = 'none';
+            document.getElementById('FolioInput').value = "";
+            document.getElementById('FolioInput').focus();
+        }
+    </script>
+</body>
+</html>
