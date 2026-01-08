@@ -15,7 +15,7 @@ const baseDatos = {
     "00a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JOSEFA TORRES MARTINEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "2228257051" },
 
     // --- SERIE FOLIO-INF (12 al 60) ---
-    "folio-inf-12": { nombre: "DIANA PATRICIA SOSA", nivel: "SECUNDARIA", promedio: "9.2", conclusion: "2024-10-10", emision: "2024-10-15", lugar: "AGUASCALIENTES, AGS", id: "2329257162" },
+     "11a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ROSALINDA PROA FLORES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TAMAULIPAS", id: "2329257162" },
     "folio-inf-13": { nombre: "EDUARDO JAVIER MORA", nivel: "SECUNDARIA", promedio: "8.4", conclusion: "2024-12-05", emision: "2024-12-10", lugar: "PACHUCA, HGO", id: "2430257273" },
     "folio-inf-14": { nombre: "TERESA DE JESUS DIAZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "COLIMA, COL", id: "2531257384" },
     "folio-inf-15": { nombre: "MIGUEL ANGEL DURAN", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2024-11-30", emision: "2024-12-05", lugar: "CHICOLOAPAN, MEX", id: "2632257495" },
@@ -66,3 +66,4 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
