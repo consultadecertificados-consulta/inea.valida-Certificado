@@ -18,7 +18,7 @@ const baseDatos = {
      "11a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ROSALINDA PROA FLORES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TAMAULIPAS", id: "2329257162" },
    "12a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JIMENA CAPISTRANO TORRES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "ESTADO DE MEXICO", id: "2430257273" },
     "13a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VERONICA VICTORIA VARGAS RESENDIZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "ESTADO DE MEXICO", id: "2531257384" },
-    "14a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ANADELIA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MOLOACAN, VER", id: "2632257495" },
+    "14a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ANADELIA DOMINGUEZ NESTOSO", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MOLOACAN, VER", id: "2632257495" },
     "folio-inf-16": { nombre: "XIMENA NAVARRO GIL", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2024-12-15", emision: "2024-12-20", lugar: "MORELIA, MICH", id: "2733257606" },
     "folio-inf-17": { nombre: "RAUL IVAN FLORES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
     "folio-inf-18": { nombre: "VALERIA RUIZ ESPARZA", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2024-11-12", emision: "2024-11-17", lugar: "ZACATECAS, ZAC", id: "2935257828" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
