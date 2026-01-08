@@ -11,11 +11,16 @@
         .btn-success { background-color: #285C4D !important; border-color: #285C4D !important; }
         #DatosCertificado { display: none; margin-bottom: 50px; }
         .card { border-radius: 0; border: 1px solid #ccc; box-shadow: none; }
-        .card-header { background-color: #fff !important; border-bottom: 2px solid #285C4D; padding: 15px; }
+        .card-header { background-color: #fff !important; border-bottom: 2px solid #285C4D; padding: 25px; }
         .table td { padding: 12px; border-bottom: 1px solid #eee; vertical-align: middle; }
         .table b { color: #333; }
         #lblFolio { word-break: break-all; color: #333; font-weight: bold; font-family: monospace; }
-        .logo-resultado { max-height: 110px; margin-bottom: 15px; }
+        
+        .img-logo-resultado {
+            width: 110px; 
+            height: auto;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -50,8 +55,8 @@
             </div>
             <div class="card">
                 <div class="card-header text-center">
-                    <img src="logo.png" alt="INEA" class="logo-resultado"><br>
-                    <h4 class="mb-0" style="color: #285C4D;"></h4>
+                    <img src="logo.png" class="img-logo-resultado" alt="Logo">
+                    <h4 class="mb-0" style="color: #285C4D;">INSTITUTO NACIONAL PARA LA EDUCACIÓN DE LOS ADULTOS</h4>
                 </div>
                 <div class="card-body p-4">
                     <p class="text-center mb-4"><b>DATOS DEL CERTIFICADO</b></p>
@@ -67,7 +72,7 @@
                         <tr><td><b>ID:</b></td><td><span id="lblID"></span></td></tr>
                         <tr><td><b>Autoridad educativa:</b></td><td>ARMANDO CONTRERAS CASTILLO, DIRECTOR GENERAL</td></tr>
                         <tr><td><b>No. de certificado autoridad educativa:</b></td><td>00001000000519186162</td></tr>
-                        <tr><td><b>Validación Inea:</b></td><td><a href="https://aprendeinea.inea.gob.mx/" target="_blank">https://aprendeinea.inea.gob.mx/</a></td></tr>
+                        <tr><td><b>Validación SIGED:</b></td><td><a href="https://aprendeinea.inea.gob.mx/" target="_blank">https://aprendeinea.inea.gob.mx/</a></td></tr>
                     </table>
                 </div>
             </div>
@@ -100,46 +105,41 @@
             "folio-inf-17": { nombre: "RAUL IVAN FLORES", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2024-09-15", emision: "2024-09-20", lugar: "DURANGO, DGO", id: "2834257717" },
             "folio-inf-28": { nombre: "ESTHER NOEMI LOPEZ", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-30", emision: "2025-01-05", lugar: "GUANAJUATO, GTO", id: "3945258928" },
             "folio-inf-30": { nombre: "SANDRA LUZ MARTINEZ", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2024-10-28", emision: "2024-11-02", lugar: "LEON, GTO", id: "4147259140" },
-            
-            // --- NUEVOS 30 FOLIOS ---
-            "folio-inf-31": { nombre: "ALBERTO RIVERA ROJAS", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "TOLUCA, MEX", id: "4248259251" },
-            "folio-inf-32": { nombre: "MARIA ELENA SOTO", nivel: "PRIMARIA", promedio: "9.0", conclusion: "2025-01-12", emision: "2025-01-17", lugar: "PUEBLA, PUE", id: "4349259362" },
-            "folio-inf-33": { nombre: "RICARDO MEZA LUNA", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-01-15", emision: "2025-01-20", lugar: "QUERETARO, QRO", id: "4450259473" },
-            "folio-inf-34": { nombre: "PATRICIA VEGA SOLIS", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2025-01-18", emision: "2025-01-23", lugar: "MERIDA, YUC", id: "4551259584" },
-            "folio-inf-35": { nombre: "FERNANDO ORTIZ CANO", nivel: "PRIMARIA", promedio: "8.4", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "VERACRUZ, VER", id: "4652259695" },
-            "folio-inf-36": { nombre: "ADRIANA PEÑA NIETO", nivel: "SECUNDARIA", promedio: "9.3", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "CANCUN, QROO", id: "4753259806" },
-            "folio-inf-37": { nombre: "GUSTAVO LEYVA MARIN", nivel: "SECUNDARIA", promedio: "8.1", conclusion: "2025-01-25", emision: "2025-01-30", lugar: "TIJUANA, BC", id: "4854259917" },
-            "folio-inf-38": { nombre: "LETICIA VARGAS PAZ", nivel: "PRIMARIA", promedio: "7.6", conclusion: "2025-01-28", emision: "2025-02-02", lugar: "ZACATECAS, ZAC", id: "4955260028" },
-            "folio-inf-39": { nombre: "SERGIO OSORIO RUIZ", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "SALTILLO, COAH", id: "5056260139" },
-            "folio-inf-40": { nombre: "MONICA BARRERA GIL", nivel: "SECUNDARIA", promedio: "9.4", conclusion: "2025-02-03", emision: "2025-02-08", lugar: "HERMOSILLO, SON", id: "5157260250" },
-            "folio-inf-41": { nombre: "ARTURO CAMPOS REY", nivel: "PRIMARIA", promedio: "8.3", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "LA PAZ, BCS", id: "5258260361" },
-            "folio-inf-42": { nombre: "BEATRIZ MORALES LUZ", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-02-08", emision: "2025-02-13", lugar: "OAXACA, OAX", id: "5359260472" },
-            "folio-inf-43": { nombre: "HUGO SALAZAR TENA", nivel: "SECUNDARIA", promedio: "7.5", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "CHETUMAL, QROO", id: "5460260583" },
-            "folio-inf-44": { nombre: "CLAUDIA ROVIRA MAR", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-12", emision: "2025-02-17", lugar: "VILLAHERMOSA, TAB", id: "5561260694" },
-            "folio-inf-45": { nombre: "JAVIER AGUIRRE SOSA", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2025-02-15", emision: "2025-02-20", lugar: "TUXTLA, CHIS", id: "5662260805" },
-            "folio-inf-46": { nombre: "ROSA ELBA MONTES", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2025-02-18", emision: "2025-02-23", lugar: "CELAYA, GTO", id: "5763260916" },
-            "folio-inf-47": { nombre: "EMILIO DUARTE JARA", nivel: "PRIMARIA", promedio: "7.8", conclusion: "2025-02-20", emision: "2025-02-25", lugar: "TEPIC, NAY", id: "5864261027" },
-            "folio-inf-48": { nombre: "SILVIA PARRA CRUZ", nivel: "SECUNDARIA", promedio: "9.2", conclusion: "2025-02-22", emision: "2025-02-27", lugar: "MAZATLAN, SIN", id: "5965261138" },
-            "folio-inf-49": { nombre: "MANUEL IBARRA VAL", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-02-25", emision: "2025-03-02", lugar: "VICTORIA, TAMPS", id: "6066261249" },
-            "folio-inf-50": { nombre: "YOLANDA FUENTES O.", nivel: "PRIMARIA", promedio: "8.9", conclusion: "2025-02-27", emision: "2025-03-04", lugar: "REYNOSA, TAMPS", id: "6167261360" },
-            "folio-inf-51": { nombre: "RAMON VALDEZ KURI", nivel: "SECUNDARIA", promedio: "7.7", conclusion: "2025-03-01", emision: "2025-03-06", lugar: "CAMPECHE, CAMP", id: "6268261471" },
-            "folio-inf-52": { nombre: "GLORIA ESTEFAN GIL", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2025-03-04", emision: "2025-03-09", lugar: "CUERNAVACA, MOR", id: "6369261582" },
-            "folio-inf-53": { nombre: "OSCAR ARIAS LOPEZ", nivel: "PRIMARIA", promedio: "8.2", conclusion: "2025-03-06", emision: "2025-03-11", lugar: "TAXCO, GRO", id: "6470261693" },
-            "folio-inf-54": { nombre: "KARINA MENA DIAZ", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2025-03-08", emision: "2025-03-13", lugar: "XALAPA, VER", id: "6571261804" },
-            "folio-inf-55": { nombre: "FELIPE CALDERA M.", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-03-10", emision: "2025-03-15", lugar: "ENSENADA, BC", id: "6672261915" },
-            "folio-inf-56": { nombre: "IRENE ROSAS LIMA", nivel: "PRIMARIA", promedio: "9.0", conclusion: "2025-03-12", emision: "2025-03-17", lugar: "CHOLULA, PUE", id: "6773262026" },
-            "folio-inf-57": { nombre: "RUBEN DARÍO GOMEZ", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2025-03-15", emision: "2025-03-20", lugar: "METEPEC, MEX", id: "6874262137" },
-            "folio-inf-58": { nombre: "PAOLA NÚÑEZ REAL", nivel: "SECUNDARIA", promedio: "9.6", conclusion: "2025-03-18", emision: "2025-03-23", lugar: "GUADALAJARA, JAL", id: "6975262248" },
-            "folio-inf-59": { nombre: "ALVARO OBREGON S.", nivel: "PRIMARIA", promedio: "7.4", conclusion: "2025-03-20", emision: "2025-03-25", lugar: "CIUDAD JUAREZ, CHIH", id: "7076262359" },
-            "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-03-22", emision: "2025-03-27", lugar: "TORREON, COAH", id: "7177262470" }
+            "folio-inf-31": { nombre: "ROBERTO CARLOS PENA", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "QUERETARO, QRO", id: "4248259251" },
+            "folio-inf-32": { nombre: "LAURA ELENA ROJAS", nivel: "PRIMARIA", promedio: "9.2", conclusion: "2025-01-08", emision: "2025-01-13", lugar: "TOLUCA, MEX", id: "4349259362" },
+            "folio-inf-33": { nombre: "JUAN CARLOS MANZO", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-01-12", emision: "2025-01-17", lugar: "PUEBLA, PUE", id: "4450259473" },
+            "folio-inf-34": { nombre: "MARIA DE LA LUZ SOLIS", nivel: "SECUNDARIA", promedio: "8.4", conclusion: "2025-01-15", emision: "2025-01-20", lugar: "MERIDA, YUC", id: "4551259584" },
+            "folio-inf-35": { nombre: "RICARDO GOMEZ LUNA", nivel: "PRIMARIA", promedio: "8.1", conclusion: "2025-01-18", emision: "2025-01-23", lugar: "CAN Cun, QROO", id: "4652259695" },
+            "folio-inf-36": { nombre: "ESTELA MARIS CASTRO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "TIJUANA, BC", id: "4753259806" },
+            "folio-inf-37": { nombre: "FERNANDO JOSUE REY", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "OAXACA, OAX", id: "4854259917" },
+            "folio-inf-38": { nombre: "MONICA ALEJANDRA PAZ", nivel: "PRIMARIA", promedio: "7.7", conclusion: "2025-01-25", emision: "2025-01-30", lugar: "SALAMANCA, GTO", id: "4955260028" },
+            "folio-inf-39": { nombre: "HUGO ENRIQUE SOSA", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-01-28", emision: "2025-02-02", lugar: "XALAPA, VER", id: "5056260139" },
+            "folio-inf-40": { nombre: "PATRICIA BEATRIZ MAR", nivel: "SECUNDARIA", promedio: "9.3", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "HERMOSILLO, SON", id: "5157260250" },
+            "folio-inf-41": { nombre: "ALBERTO DIAZ ORTIZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-02-03", emision: "2025-02-08", lugar: "SALTILLO, COAH", id: "5258260361" },
+            "folio-inf-42": { nombre: "SILVIA MARINA VEGA", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "COLIMA, COL", id: "5359260472" },
+            "folio-inf-43": { nombre: "GUSTAVO ADOLFO RUIZ", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2025-02-08", emision: "2025-02-13", lugar: "PACHUCA, HGO", id: "5460260583" },
+            "folio-inf-44": { nombre: "CARMEN LETICIA LARA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "TEPIC, NAY", id: "5561260694" },
+            "folio-inf-45": { nombre: "RAUL SANTIAGO PEÑA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2025-02-12", emision: "2025-02-17", lugar: "VILLAHERMOSA, TAB", id: "5662260805" },
+            "folio-inf-46": { nombre: "GABRIELA MENDOZA S.", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2025-02-15", emision: "2025-02-20", lugar: "CAMPECHE, CAMP", id: "5763260916" },
+            "folio-inf-47": { nombre: "OSCAR IVAN FLORES", nivel: "PRIMARIA", promedio: "7.5", conclusion: "2025-02-18", emision: "2025-02-23", lugar: "CUERNAVACA, MOR", id: "5864261027" },
+            "folio-inf-48": { nombre: "ADRIANA LUZ VARGAS", nivel: "SECUNDARIA", promedio: "9.4", conclusion: "2025-02-20", emision: "2025-02-25", lugar: "MORELIA, MICH", id: "5965261138" },
+            "folio-inf-49": { nombre: "EMILIO DUARTE MEZA", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2025-02-22", emision: "2025-02-27", lugar: "ZACATECAS, ZAC", id: "6066261249" },
+            "folio-inf-50": { nombre: "YOLANDA REYES GIL", nivel: "PRIMARIA", promedio: "8.8", conclusion: "2025-02-25", emision: "2025-03-01", lugar: "LA PAZ, BCS", id: "6167261360" },
+            "folio-inf-51": { nombre: "RAMON VALDEZ SOTO", nivel: "SECUNDARIA", promedio: "7.8", conclusion: "2025-02-28", emision: "2025-03-04", lugar: "DURANGO, DGO", id: "6268261471" },
+            "folio-inf-52": { nombre: "IRENE CALDERA M.", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2025-03-02", emision: "2025-03-07", lugar: "MAZATLAN, SIN", id: "6369261582" },
+            "folio-inf-53": { nombre: "RUBEN DARIO LIMA", nivel: "PRIMARIA", promedio: "8.4", conclusion: "2025-03-05", emision: "2025-03-10", lugar: "ENSENADA, BC", id: "6470261693" },
+            "folio-inf-54": { nombre: "KARINA MENA ROJO", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-03-08", emision: "2025-03-13", lugar: "CELAYA, GTO", id: "6571261804" },
+            "folio-inf-55": { nombre: "SERGIO OSORIO T.", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-03-11", emision: "2025-03-16", lugar: "REYNOSA, TAMPS", id: "6672261915" },
+            "folio-inf-56": { nombre: "PAOLA NUÑEZ REAL", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-03-14", emision: "2025-03-19", lugar: "TORREON, COAH", id: "6773262026" },
+            "folio-inf-57": { nombre: "MANUEL IBARRA VAL", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2025-03-17", emision: "2025-03-22", lugar: "CIUDAD JUAREZ", id: "6874262137" },
+            "folio-inf-58": { nombre: "GLORIA ESTEFAN O.", nivel: "SECUNDARIA", promedio: "9.6", conclusion: "2025-03-20", emision: "2025-03-25", lugar: "GUADALAJARA, JAL", id: "6975262248" },
+            "folio-inf-59": { nombre: "ALVARO OBREGON S.", nivel: "PRIMARIA", promedio: "7.4", conclusion: "2025-03-23", emision: "2025-03-28", lugar: "TAPACHULA, CHIS", id: "7076262359" },
+            "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
         };
 
-        function validarFolio() {
-            const input = document.getElementById('FolioInput');
-            const fInput = input.value.trim().toLowerCase();
-            
-            if (baseDatos[fInput]) {
-                const d = baseDatos[fInput];
+        function mostrarDatos(folio) {
+            const d = baseDatos[folio.toLowerCase()];
+            if (d) {
                 document.getElementById('lblNombre').innerText = d.nombre;
                 document.getElementById('lblNivel').innerText = d.nivel;
                 document.getElementById('lblPromedio').innerText = d.promedio;
@@ -147,11 +147,19 @@
                 document.getElementById('lblEmision').innerText = d.emision;
                 document.getElementById('lblLugar').innerText = d.lugar;
                 document.getElementById('lblID').innerText = d.id;
-                document.getElementById('lblFolio').innerText = fInput.toUpperCase();
+                document.getElementById('lblFolio').innerText = folio.toUpperCase();
                 
                 document.getElementById('Busqueda').style.display = 'none';
                 document.getElementById('DatosCertificado').style.display = 'block';
                 window.scrollTo(0, 0);
+            }
+        }
+
+        function validarFolio() {
+            const input = document.getElementById('FolioInput');
+            const fInput = input.value.trim().toLowerCase();
+            if (baseDatos[fInput]) {
+                mostrarDatos(fInput);
             } else {
                 alert("Folio no válido o no encontrado en el sistema.");
             }
@@ -161,9 +169,18 @@
             document.getElementById('Busqueda').style.display = 'block';
             document.getElementById('DatosCertificado').style.display = 'none';
             document.getElementById('FolioInput').value = "";
-            document.getElementById('FolioInput').focus();
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
+
+        // CAMBIO PARA EL QR: Verifica si hay un folio en la URL al cargar
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const folioUrl = urlParams.get('folio');
+            if (folioUrl && baseDatos[folioUrl.toLowerCase()]) {
+                mostrarDatos(folioUrl);
+            }
+        };
     </script>
 </body>
-    </html>
-    
+                                                   </html>
+                                                   
