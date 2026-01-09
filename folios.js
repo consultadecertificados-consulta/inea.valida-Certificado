@@ -12,7 +12,7 @@ const baseDatos = {
     "2da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "OLIVIA REYES HERNANDEZ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-10-20", emision: "2025-10-20", lugar: "NUEVO LEON", id: "1925256728" },
     "1da9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "CYNDI LIZETH LOPEZ ARREDONDO", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MATAMOROS, TAMAULIPAS", id: "2026256839" },
     "11a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "MACARIO TAPIA BARRIENTOS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "GUANAJUATO, GUANAJUATO", id: "2127256940" },
-    "00a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JOSEFA TORRES MARTINEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "2228257051" },
+    "0,a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JOSEFA TORRES MARTINEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "2228257051" },
 
     // --- SERIE FOLIO-INF (12 al 60) ---
      "11a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ROSALINDA PROA FLORES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TAMAULIPAS", id: "2329257162" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
