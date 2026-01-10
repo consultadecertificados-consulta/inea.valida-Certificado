@@ -22,7 +22,7 @@ const baseDatos = {
    "1qa9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JESSICA ALEJANDRO MONTEJO", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2015-11-15", emision: "2015-11-20", lugar: "LAS CHOAPAS, VER", id: "2733257606" },
      "1": { nombre: "JOEL RODRIGUEZ CALDERON", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "COAHUILA,COAHUILA", id: "2834257717" },
     "1qa8226f-6e07-41cc-81f6-23cb903e6093": { nombre: "AXEL DE JESUS GAYTAN JUAREZ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, N.L", id: "2935257828" },
-   "1qa92126H-6e07-41cc-81f6-23cb903e6593": { nombre: "JAIRO AHILTON TAPIA ALVAREZ ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CIUDAD DE MEXICO", id: "3036257939" },
+   "1a92126H-6e07-41cc-81f6-23cb903e6593": { nombre: "JAIRO AHILTON TAPIA ALVAREZ ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CIUDAD DE MEXICO", id: "3036257939" },
     "folio-inf-20": { nombre: "MÓNICA VÁZQUEZ L.", nivel: "PRIMARIA", promedio: "9.4", conclusion: "2025-01-02", emision: "2025-01-07", lugar: "PUEBLA, PUE", id: "3137258050" },
     "folio-inf-21": { nombre: "ALFONSO REYES M.", nivel: "SECUNDARIA", promedio: "7.5", conclusion: "2024-12-20", emision: "2024-12-25", lugar: "SALTILLO, COAH", id: "3238258161" },
     "folio-inf-22": { nombre: "BEATRIZ ADRIANA MAR", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2024-11-18", emision: "2024-11-23", lugar: "HERMOSILLO, SON", id: "3339258272" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
