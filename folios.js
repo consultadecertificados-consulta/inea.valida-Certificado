@@ -24,8 +24,8 @@ const baseDatos = {
     "1qa8226f-6e07-41cc-81f6-23cb903e6093": { nombre: "AXEL DE JESUS GAYTAN JUAREZ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, N.L", id: "2935257828" },
     "1qa8226f-6e07-41cc-81f6-23cb903e6091": { nombre: "MELANY NAVARRETE FLORES ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "FORTIN, VERACRUZ", id: "3036257939" },
     "1na8226f-6e07-41cc-81f6-23cb903e6091": { nombre: "MARIA HERMELINDA BEJARANO LOERA.", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CHIHUAHUA. CHI", id: "3137258050" },
-    "1na8226f-6e07-41cc-81f6-23cb903e6000": { nombre: "REGULO QUIROZ REYES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "NARANJOS, VERACRUZ", id: "3238258161" },
-    "1na8226f-6e07-41cc-81f6-23cb9l3e6008": { nombre: "EMMANUEL JUAREZ GARCIA", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TENOSIQUE, TABASCO", id: "3339258272" },
+    "1na8226f-6e07-41cc-81f6-23cb903e6000": { nombre: "REGULO QUIROZ REYES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MATAMOROS, TAMAULIPAS ", id: "3238258161" },
+    "1na8226f-6e07-41cc-81f6-23cb9l3e6008": { nombre: "MARIA FERNANDA HEREIDA NUÑEZ ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TENOSIQUE, TABASCO", id: "3339258272" },
     "folio-inf-23": { nombre: "SANTIAGO PEÑA G.", nivel: "PRIMARIA", promedio: "8.2", conclusion: "2024-09-30", emision: "2024-10-05", lugar: "VILLAHERMOSA, TAB", id: "3440258383" },
     "folio-inf-24": { nombre: "LORENA POOL H.", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MÉRIDA, YUC", id: "3541258494" },
     "folio-inf-25": { nombre: "HUGO RIVERA M.", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2024-10-25", emision: "2024-10-30", lugar: "CHIHUAHUA, CHIH", id: "3642258605" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
