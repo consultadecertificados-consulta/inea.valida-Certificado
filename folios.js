@@ -20,7 +20,7 @@ const baseDatos = {
     "13a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "VERONICA VICTORIA VARGAS RESENDIZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "ESTADO DE MEXICO", id: "2531257384" },
     "14a9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "ANADELIA DOMINGUEZ NESTOSO", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MOLOACAN, VER", id: "2632257495" },
    "1qa9226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JESSICA ALEJANDRO MONTEJO", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2015-11-15", emision: "2015-11-20", lugar: "LAS CHOAPAS, VER", id: "2733257606" },
-     "1": { nombre: "JOEL RODRIGUEZ CALDERON", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "COAHUILA,COAHUILA", id: "2834257717" },
+     "1Na8226f-6e07-41cc-81f6-23cb9l3e6008": { nombre: "FELIPE PEREZ MARCIAL", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN ANDRES TUXTLA, VER", id: "2834257717" },
     "1qa8226f-6e07-41cc-81f6-23cb903e6093": { nombre: "AXEL DE JESUS GAYTAN JUAREZ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, N.L", id: "2935257828" },
     "1qa8226f-6e07-41cc-81f6-23cb903e6091": { nombre: "MELANY NAVARRETE FLORES ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "FORTIN, VERACRUZ", id: "3036257939" },
     "1na8226f-6e07-41cc-81f6-23cb903e6091": { nombre: "MARIA HERMELINDA BEJARANO LOERA.", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CHIHUAHUA. CHI", id: "3137258050" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
