@@ -27,7 +27,7 @@ const baseDatos = {
     "1na8226f-6e07-41cc-81f6-23cb903e6000": { nombre: "REGULO QUIROZ REYES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MATAMOROS, TAMAULIPAS ", id: "3238258161" },
     "1na8226f-6e07-41cc-81f6-23cb9l3e6008": { nombre: "MARIA FERNANDA HEREIDA NUÑEZ ", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MATAMOROS, TAMAULIPAS ", id: "3339258272" },
     "1oa8226f-6e07-41cc-81f6-23cb9l3e6008": { nombre: "MARISELA MUÑIZ GONZALEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY,  NUEVO LEÓN ", id: "3440258383" },
-    "folio-inf-24": { nombre: "LORENA POOL H.", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MÉRIDA, YUC", id: "3541258494" },
+    4da8221f-6e17-41cc-81f6-23cb903e6593: { nombre: "LINDA IVETH BERNAL ARMAS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CUAUTITLAN IZCALLI, EDO MEX", id: "3541258494" },
     "4da9226f-6e17-41cc-81f6-23cb903e6593": { nombre: "CELSO JESUS SANCHEZ MUÑIS", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY , NUEVO LEON", id: "3642258605" },
     "folio-inf-26": { nombre: "MARIA JOSÉ TELLO", nivel: "PRIMARIA", promedio: "8.7", conclusion: "2024-12-08", emision: "2024-12-13", lugar: "CUERNAVACA, MOR", id: "3743258716" },
     "folio-inf-o7": { nombre: "RICARDO MARÍN PAZ", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "LEÓN, GTO", id: "3844258827" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
