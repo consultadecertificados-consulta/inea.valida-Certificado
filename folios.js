@@ -30,7 +30,7 @@ const baseDatos = {
     "folio-inf-24": { nombre: "LORENA POOL H.", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2025-01-10", emision: "2025-01-15", lugar: "MÉRIDA, YUC", id: "3541258494" },
     "folio-inf-25": { nombre: "HUGO RIVERA M.", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2024-10-25", emision: "2024-10-30", lugar: "CHIHUAHUA, CHIH", id: "3642258605" },
     "folio-inf-26": { nombre: "MARIA JOSÉ TELLO", nivel: "PRIMARIA", promedio: "8.7", conclusion: "2024-12-08", emision: "2024-12-13", lugar: "CUERNAVACA, MOR", id: "3743258716" },
-    "folio-inf-27": { nombre: "RICARDO MARÍN PAZ", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "LEÓN, GTO", id: "3844258827" },
+    "folio-inf-o7": { nombre: "RICARDO MARÍN PAZ", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2024-11-01", emision: "2024-11-06", lugar: "LEÓN, GTO", id: "3844258827" },
     "folio-inf-28": { nombre: "ESTHER NOEMI LOPEZ", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2024-12-30", emision: "2025-01-05", lugar: "GUANAJUATO, GTO", id: "3945258928" },
     "folio-inf-29": { nombre: "ALBERTO DIAZ G.", nivel: "PRIMARIA", promedio: "7.6", conclusion: "2024-09-22", emision: "2024-09-27", lugar: "QUERÉTARO, QRO", id: "4046259039" },
     "folio-inf-30": { nombre: "SANDRA LUZ MARTINEZ", nivel: "SECUNDARIA", promedio: "9.1", conclusion: "2024-10-28", emision: "2024-11-02", lugar: "LEON, GTO", id: "4147259140" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
