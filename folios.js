@@ -35,7 +35,7 @@ const baseDatos = {
     "4da9226f-6o17-41ec-11g6-23cb903e6593": { nombre: "JAZMIN ELIZABETH ACEVES CARDENAS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "GUADALAJARA, JALISCO", id: "4046259039" },
     "4da9226f-6o13-41ec-81g6-23cb903e6598": { nombre: "GUADALUPE YESSICA GALVAN ORTEGA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TLALPAN, CIUDAD DE MEXICO", id: "4147259140" },
     "folio-inf-31": { nombre: "ROBERTO CARLOS PENA", nivel: "SECUNDARIA", promedio: "8.8", conclusion: "2025-01-05", emision: "2025-01-10", lugar: "QUERETARO, QRO", id: "4248259251" },
-    "22a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "MIRIAM ALEJANDRA DAVILA VENTURA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JAÑISCO, JALISCO", id: "4349259362" },
+    "22a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "MIRIAM ALEJANDRA DAVILA VENTURA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4349259362" },
     "folio-inf-33": { nombre: "JUAN CARLOS MANZO", nivel: "SECUNDARIA", promedio: "7.9", conclusion: "2025-01-12", emision: "2025-01-17", lugar: "PUEBLA, PUE", id: "4450259473" },
     "folio-inf-34": { nombre: "MARIA DE LA LUZ SOLIS", nivel: "SECUNDARIA", promedio: "8.4", conclusion: "2025-01-15", emision: "2025-01-20", lugar: "MERIDA, YUC", id: "4551259584" },
     "folio-inf-35": { nombre: "RICARDO GOMEZ LUNA", nivel: "PRIMARIA", promedio: "8.1", conclusion: "2025-01-18", emision: "2025-01-23", lugar: "CAN Cun, QROO", id: "4652259695" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
