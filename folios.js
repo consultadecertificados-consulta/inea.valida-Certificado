@@ -38,7 +38,7 @@ const baseDatos = {
     "22a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "MIRIAM ALEJANDRA DAVILA VENTURA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4349259362" },
     "8ea8226f-5f07-41cc-81f6-88cb903e7500": { nombre: "MARIA DE JESUS NUÑES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "NAUCALPAN DE JUAREZ, EDO MEX", id: "4450259473" },
     "98a1226f-6o13-41ec-81g6-23cb903e659-": { nombre: "JUAN JOSE PEREZ ZAMORA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TECAMAC, EDO MEX", id: "4551259584" },
-    "folio-inf-35": { nombre: "RICARDO GOMEZ LUNA", nivel: "PRIMARIA", promedio: "8.1", conclusion: "2025-01-18", emision: "2025-01-23", lugar: "CAN Cun, QROO", id: "4652259695" },
+   "6da9226f-6e07-77cc-81f6-23cb903e6593": { nombre: "PAOLA GUADALUPE GUTIERREZ DE LEON", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "4652259695" },
     "folio-inf-36": { nombre: "ESTELA MARIS CASTRO", nivel: "SECUNDARIA", promedio: "9.0", conclusion: "2025-01-20", emision: "2025-01-25", lugar: "TIJUANA, BC", id: "4753259806" },
     "folio-inf-37": { nombre: "FERNANDO JOSUE REY", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-01-22", emision: "2025-01-27", lugar: "OAXACA, OAX", id: "4854259917" },
     "folio-inf-38": { nombre: "MONICA ALEJANDRA PAZ", nivel: "PRIMARIA", promedio: "7.7", conclusion: "2025-01-25", emision: "2025-01-30", lugar: "SALAMANCA, GTO", id: "4955260028" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
