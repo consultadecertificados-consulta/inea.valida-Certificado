@@ -34,7 +34,7 @@ const baseDatos = {
     "4da9226f-6o17-41ec-81g6-11cb903e6593": { nombre: "MARIA GALVAN LOPEZ ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-15", lugar: "JALISCO, JALISCO", id: "3945258928" },
     "4da9226f-6o17-41ec-11g6-23cb903e6593": { nombre: "JAZMIN ELIZABETH ACEVES CARDENAS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "GUADALAJARA, JALISCO", id: "4046259039" },
     "4da9226f-6o13-41ec-81g6-23cb903e6598": { nombre: "GUADALUPE YESSICA GALVAN ORTEGA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TLALPAN, CIUDAD DE MEXICO", id: "4147259140" },
-   "88a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "ROCIO ELIZABETH ARGUELLO REYES ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SANTA CATARINA, N.L", id: "4248259251" },
+   "88a1226f-6o13-41ec-81g6-23cb903e659-": { nombre: "ROCIO ELIZABETH ARGUELLO REYES ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SANTA CATARINA, N.L", id: "4248259251" },
     "22a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "MIRIAM ALEJANDRA DAVILA VENTURA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4349259362" },
    "99a1226f-6o13-41ec-81g6-23cb903e659-": { nombre: "MARIA DEL CARMEN MUÑOS VARGAS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "GUADALAJARA, JALISCO", id: "4450259473" },
     "98a1226f-6o13-41ec-81g6-23cb903e659-": { nombre: "JUAN JOSE PEREZ ZAMORA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TECAMAC, EDO MEX", id: "4551259584" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
