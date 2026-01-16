@@ -16,10 +16,22 @@
         .table b { color: #333; }
         #lblFolio { word-break: break-all; color: #333; font-weight: bold; font-family: monospace; }
         
+        /* AJUSTE PARA MÓVILES: Logo responsivo */
         .img-logo-resultado {
+            max-width: 100%; /* No se saldrá de su contenedor */
             width: 300px; 
             height: auto;
             margin-bottom: 20px;
+        }
+
+        /* AJUSTE PARA MÓVILES: Evita que la tabla desborde el marco */
+        .table {
+            width: 100%;
+            table-layout: fixed; /* Fuerza a la tabla a respetar el ancho del contenedor */
+            word-wrap: break-word; /* Rompe palabras largas si es necesario */
+        }
+        .table td {
+            word-break: break-word; /* Ajusta el texto largo dentro de las celdas */
         }
 
         /* Estilo para el mensaje de error */
@@ -135,7 +147,6 @@
             const errorDiv = document.getElementById('MensajeError');
             const datosDiv = document.getElementById('DatosCertificado');
 
-            // Resetear vistas antes de buscar
             errorDiv.style.display = 'none';
             
             if (fInput === "") {
@@ -146,7 +157,6 @@
             if (baseDatos[fInput]) {
                 mostrarDatos(fInput);
             } else {
-                // Mostrar mensaje de error con diseño INEA
                 errorDiv.style.display = 'block';
                 datosDiv.style.display = 'none';
             }
