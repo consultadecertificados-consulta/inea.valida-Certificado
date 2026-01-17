@@ -37,7 +37,7 @@ const baseDatos = {
   "1889226f-6e07-41cc-81f6-23cb903e6593": { nombre: "JUAN CARLOS ROBLES SANCHEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TOMATLAN, JALISCO", id: "4248259251" },
     "22a1226f-6o13-41ec-81g6-23cb903e6598": { nombre: "MIRIAM ALEJANDRA DAVILA VENTURA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4349259362" },
     "8ea8226f-5f07-41cc-81f6-88cb903e750-": { nombre: "MARIA DE JESUS NUÑES", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "NAUCALPAN DE JUAREZ, EDO MEX", id: "4450259473" },
-    "98a1226f-6o13-41ec-81g6-23cb903e659-": { nombre: "JUAN JOSE PEREZ ZAMORA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TECAMAC, EDO MEX", id: "4551259584" },
+    "98a1226f-6o13-41ec-81g6-23cb903e6594": { nombre: "MANUEL JOAQUIN ESPINOSA CRUZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "POZA RICA, VER", id: "4551259584" },
    "6da9226f-6e07-77cc-81f6-23cb903e6593PP": { nombre: "PAOLA GUADALUPE GUTIERREZ DE LEON", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "4652259695" },
     "11a9226f-6e07-4199-81f6-23cb903e6593": { nombre: "ALBERTO EZEQUIEL BERLIN ALMANZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "VERACRUZ, VER", id: "4753259806" },
      "0aa9226f-6e07-99cc-81f6-23cb903e6593": { nombre: "JOSE GIOVANNI CRUZ RODRIGUEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4854259917" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
