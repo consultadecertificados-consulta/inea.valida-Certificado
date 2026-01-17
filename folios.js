@@ -41,7 +41,7 @@ const baseDatos = {
    "6da9226f-6e07-77cc-81f6-23cb903e6593PP": { nombre: "PAOLA GUADALUPE GUTIERREZ DE LEON", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "4652259695" },
     "11a9226f-6e07-4199-81f6-23cb903e6593": { nombre: "ALBERTO EZEQUIEL BERLIN ALMANZA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "VERACRUZ, VER", id: "4753259806" },
      "0aa9226f-6e07-99cc-81f6-23cb903e6593": { nombre: "JOSE GIOVANNI CRUZ RODRIGUEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "JALISCO, JALISCO", id: "4854259917" },
-   "9da9226f-6e088-41cc-81f6-23cb903e6593": { nombre: "---------", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2015-01-15", emision: "2015-01-20", lugar: "COSAMALOAPAN, VERACRUZ", id: "4955260028" },
+   "9da9226f-6e088-41cc-81f6-23cb903e6593": { nombre: "ISMAEL HERNANDEZ HERNANDEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CHIAPAS, CHIAPAS", id: "4955260028" },
     "9da9226f-6e888-41cc-81f6-23cb903e6593": { nombre: "GREGORIO COLLAZO GUZMAN", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "5056260139" },
     "folio-inf-40": { nombre: "PATRICIA BEATRIZ MAR", nivel: "SECUNDARIA", promedio: "9.3", conclusion: "2025-02-01", emision: "2025-02-06", lugar: "HERMOSILLO, SON", id: "5157260250" },
     "folio-inf-41": { nombre: "ALBERTO DIAZ ORTIZ", nivel: "PRIMARIA", promedio: "8.0", conclusion: "2025-02-03", emision: "2025-02-08", lugar: "SALTILLO, COAH", id: "5258260361" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
