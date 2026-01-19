@@ -44,7 +44,7 @@ const baseDatos = {
    "9da9226f-6e088-41cc-81f6-23cb903e6593": { nombre: "ISMAEL HERNANDEZ HERNANDEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "CHIAPAS, CHIAPAS", id: "4955260028" },
     "9da9226f-6e888-41cc-81f6-23cb903e6593": { nombre: "GREGORIO COLLAZO GUZMAN", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN LUIS POTOSI", id: "5056260139" },
     "9da9226f-6e878-41cc-81f6-23cb999e6593": { nombre: "PEDRO GUZMAN CHAGALA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN ANDRES TUXTLA, VER", id: "5157260250" },
-    "9da9226f-6667-41cc-81f6-23cb903e6593": { nombre: "------", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, NUEVO LEON", id: "5258260361" },
+    "9da9226f-6667-41cc-81f6-23cb903e6593": { nombre: "YARET ZAMAHI CORPUS SENA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TAMAULIPAS, TAMAULIPAS", id: "5258260361" },
     "folio-inf-42": { nombre: "SILVIA MARINA VEGA", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-02-05", emision: "2025-02-10", lugar: "COLIMA, COL", id: "5359260472" },
     "folio-inf-43": { nombre: "GUSTAVO ADOLFO RUIZ", nivel: "SECUNDARIA", promedio: "7.6", conclusion: "2025-02-08", emision: "2025-02-13", lugar: "PACHUCA, HGO", id: "5460260583" },
     "folio-inf-44": { nombre: "CARMEN LETICIA LARA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "TEPIC, NAY", id: "5561260694" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
