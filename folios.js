@@ -46,7 +46,7 @@ const baseDatos = {
     "9da9226f-6e878-41cc-81f6-23cb999e6593": { nombre: "PEDRO GUZMAN CHAGALA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "SAN ANDRES TUXTLA, VER", id: "5157260250" },
     "9da9226f-6667-41cc-81f6-23cb903e6593": { nombre: "YARET ZAMAHI CORPUS SENA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TAMAULIPAS, TAMAULIPAS", id: "5258260361" },
    "9da922ff-6667-41cc-81f6-23cb903e6593": { nombre: "MANUEL MARTINEZ GONZALEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "MONTERREY, NUEVO LEON", id: "5359260472" },
-    "9da922ff-6667-410c-80f6-23cb903e6593": { nombre: "----------", nivel: "PRIMARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-15", lugar: "TORREON, COAHUILA", id: "5460260583" },
+    "9da922ff-6667-410c-80f6-23cb903e6593": { nombre: "ARTURO BELTRAN JULIAN", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-15", lugar: "ATIZAPAN DE ZARAGOZA, EDO MEX", id: "5460260583" },
     "folio-inf-44": { nombre: "CARMEN LETICIA LARA", nivel: "PRIMARIA", promedio: "9.1", conclusion: "2025-02-10", emision: "2025-02-15", lugar: "TEPIC, NAY", id: "5561260694" },
     "folio-inf-45": { nombre: "RAUL SANTIAGO PEÑA", nivel: "SECUNDARIA", promedio: "8.2", conclusion: "2025-02-12", emision: "2025-02-17", lugar: "VILLAHERMOSA, TAB", id: "5662260805" },
     "folio-inf-46": { nombre: "GABRIELA MENDOZA S.", nivel: "SECUNDARIA", promedio: "8.6", conclusion: "2025-02-15", emision: "2025-02-20", lugar: "CAMPECHE, CAMP", id: "5763260916" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
