@@ -51,7 +51,7 @@ const baseDatos = {
     "1da9226f-6e07-41cc-81f6-888b903e6593": { nombre: "ANTONIA CRUZ RAMOS", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-09-20", emision: "2025-09-25", lugar: "REYNOSA, TAMAULIPAS", id: "5662260805" },
      "6da9226f-6e07-41cc-81f6-23cb903e6666": { nombre: "RAMIRO OCHOA BRICEÑO", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "REYNOSA, TAMAULIPAS", id: "5763260916" },
    "9da92666-6e07-41cc-81f6-23cb903e6593": { nombre: "VICTORIA NAYELI JULIAN LOPEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-12-15", emision: "2025-11-20", lugar: "TLAQUEPAQUE, JALISCO", id: "5864261027" },
-    "folio-inf-48": { nombre: "ADRIANA LUZ VARGAS", nivel: "SECUNDARIA", promedio: "9.4", conclusion: "2025-02-20", emision: "2025-02-25", lugar: "MORELIA, MICH", id: "5965261138" },
+   "0888226f-6e07-41cc-81f6-23cb903e6593": { nombre: "PEDRO JOSE ROJAS CHAVEZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "VERACRUZ, VERACRUZ", id: "5965261138" },
     "folio-inf-49": { nombre: "EMILIO DUARTE MEZA", nivel: "SECUNDARIA", promedio: "8.3", conclusion: "2025-02-22", emision: "2025-02-27", lugar: "ZACATECAS, ZAC", id: "6066261249" },
     "folio-inf-50": { nombre: "YOLANDA REYES GIL", nivel: "PRIMARIA", promedio: "8.8", conclusion: "2025-02-25", emision: "2025-03-01", lugar: "LA PAZ, BCS", id: "6167261360" },
     "folio-inf-51": { nombre: "RAMON VALDEZ SOTO", nivel: "SECUNDARIA", promedio: "7.8", conclusion: "2025-02-28", emision: "2025-03-04", lugar: "DURANGO, DGO", id: "6268261471" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
