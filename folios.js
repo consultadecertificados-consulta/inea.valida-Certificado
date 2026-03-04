@@ -54,7 +54,7 @@ const baseDatos = {
    "0888226f-6e07-41cc-81f6-23cb903e6591": { nombre: "JUAN SALVADOR SANTIAGO VALDERAMA", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "GUADALAJARA, JALISCO", id: "5965261138" },
     "9da9226f-6e07-41cc-81f6-999b903e6598": { nombre: "VICTOR MANUEL ESQUIVEL JUAREZ", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "COAHUILA, COAHUILA", id: "6066261249" },
    "3da9226f-6e07-41cc-8155-23cb903e6593": { nombre: "ISABEL MILLAN", nivel: "SECUNDARIA", promedio: "8.5", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "YECAPIXTLA, MORELOS", id: "6167261360" },
-    "3da9226f-6e07-41cc-8111-23cb903e6593": { nombre: "FAUSTO MEJIA RUIZ", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TULACINGO DE BRAVO, HIDALGO", id: "6268261471" },
+    "3da9226f-6e07-41cc-8111-23cb903e1708": { nombre: "FAUSTO MEJIA RUIZ", nivel: "SECUNDARIA", promedio: "8.0", conclusion: "2025-11-15", emision: "2025-11-20", lugar: "TULACINGO DE BRAVO, HIDALGO", id: "6268261471" },
     "folio-inf-52": { nombre: "IRENE CALDERA M.", nivel: "SECUNDARIA", promedio: "9.5", conclusion: "2025-03-02", emision: "2025-03-07", lugar: "MAZATLAN, SIN", id: "6369261582" },
     "folio-inf-53": { nombre: "RUBEN DARIO LIMA", nivel: "PRIMARIA", promedio: "8.4", conclusion: "2025-03-05", emision: "2025-03-10", lugar: "ENSENADA, BC", id: "6470261693" },
     "folio-inf-54": { nombre: "KARINA MENA ROJO", nivel: "SECUNDARIA", promedio: "8.7", conclusion: "2025-03-08", emision: "2025-03-13", lugar: "CELAYA, GTO", id: "6571261804" },
@@ -66,6 +66,7 @@ const baseDatos = {
     "folio-inf-60": { nombre: "LORENA HERRERA P.", nivel: "SECUNDARIA", promedio: "8.9", conclusion: "2025-03-25", emision: "2025-03-30", lugar: "ACAPULCO, GRO", id: "7177262470" }
 
 };
+
 
 
 
